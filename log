@@ -1,0 +1,14 @@
+=== Dockerfile for mergable:526 (debian-stable/4.02.3/opam-repo:e548aee4bd73e5409d4fcd7dfc95fc5595f0fb66)
+[2016-09-03 21:02.37] Starting...
+[2016-09-03 21:02.37] Building Dockerfile for installing mirage (debian-stable 4.02.3)
+FROM ocaml/opam:debian-stable_ocaml-4.02.3
+RUN git -C /home/opam/opam-repository pull origin master
+RUN git -C /home/opam/opam-repository checkout e548aee4bd73e5409d4fcd7dfc95fc5595f0fb66
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/526/head:cibranch
+RUN git checkout 581364d405e47db9eb45bef07f4f74487de40400
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-03 21:02.37] Success
