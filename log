@@ -1,0 +1,14 @@
+=== Dockerfile for mergable:559 (alpine-3.4/4.03.0/opam-repo:ee8cc617a7b766014d45d04371b7324fa41912f9)
+[2016-09-03 16:09.32] Starting...
+[2016-09-03 16:09.32] Building Dockerfile for installing mirage (alpine-3.4 4.03.0)
+FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+RUN git -C /home/opam/opam-repository pull origin master
+RUN git -C /home/opam/opam-repository checkout ee8cc617a7b766014d45d04371b7324fa41912f9
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/559/head:cibranch
+RUN git checkout 0d510c6627835b3df792db7bc3fb2cba082de540
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-03 16:09.32] Success
