@@ -1,1 +1,1 @@
-Building container 7697dc82e86f6388708b2ddc3ed37443
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=7697dc82e86f6388708b2ddc3ed37443 --label com.docker.datakit.builton=1472954437.12 -t mirageci2:7697dc82e86f6388708b2ddc3ed37443 --no-cache --rm --force-rm --pull - < /tmp/tmp-5e4f8d9/Dockerfile" exited with status 4
