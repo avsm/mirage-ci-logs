@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:383 (fedora-24/4.03.0/opam-repo:445f96e93315f5d9dae0e7472c9c7b9907c10b74)
+[2016-09-04 09:04.52] Starting...
+[2016-09-04 09:04.52] Building Dockerfile for installing mirage (fedora-24 4.03.0)
+FROM ocaml/opam:fedora-24_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 445f96e93315f5d9dae0e7472c9c7b9907c10b74
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/383/head:cibranch
+RUN git checkout 9f4e6f1c5937bdbdfbf1e4bab029c5ab09c8e6d1
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-04 09:04.52] Success
