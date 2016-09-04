@@ -1,1 +1,1 @@
-Dockerfile for mirageci:383 (centos-7/4.03.0/opam-repo:e548aee4bd73e5409d4fcd7dfc95fc5595f0fb66)
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=6b613d85133330708c99a0d0f1571a57 --label com.docker.datakit.builton=1472940261.15 -t opamci:6b613d85133330708c99a0d0f1571a57 --no-cache --rm --force-rm --pull - < /tmp/tmp-3c41bd3d/Dockerfile" exited with status 129
