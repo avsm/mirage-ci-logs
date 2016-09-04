@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:383 (centos-7/4.03.0/opam-repo:6cefd96367abc78d4ce13f081c8b7dd1552a76f6)
+[2016-09-04 10:20.32] Starting...
+[2016-09-04 10:20.32] Building Dockerfile for installing mirage (centos-7 4.03.0)
+FROM ocaml/opam:centos-7_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 6cefd96367abc78d4ce13f081c8b7dd1552a76f6
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/383/head:cibranch
+RUN git checkout 9f4e6f1c5937bdbdfbf1e4bab029c5ab09c8e6d1
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-04 10:20.32] Success
