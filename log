@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:559 (ubuntu-16.04/4.03.0/opam-repo:445f96e93315f5d9dae0e7472c9c7b9907c10b74)
+[2016-09-04 08:51.45] Starting...
+[2016-09-04 08:51.45] Building Dockerfile for installing mirage (ubuntu-16.04 4.03.0)
+FROM ocaml/opam:ubuntu-16.04_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 445f96e93315f5d9dae0e7472c9c7b9907c10b74
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/559/head:cibranch
+RUN git checkout 0d510c6627835b3df792db7bc3fb2cba082de540
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-04 08:51.45] Success
