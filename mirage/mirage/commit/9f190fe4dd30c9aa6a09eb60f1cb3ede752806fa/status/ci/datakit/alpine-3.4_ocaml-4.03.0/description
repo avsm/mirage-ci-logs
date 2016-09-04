@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=b7ed691413590a2dbf0f968e5f94ef96 --label com.docker.datakit.builton=1472977751.52 -t mirageci2:b7ed691413590a2dbf0f968e5f94ef96 --no-cache --rm --force-rm --pull - < /tmp/tmp-2dbe109d/Dockerfile" exited with status 3
+Dockerfile for mirageci2:558 (alpine-3.4/4.03.0/opam-repo:6cefd96367abc78d4ce13f081c8b7dd1552a76f6)
