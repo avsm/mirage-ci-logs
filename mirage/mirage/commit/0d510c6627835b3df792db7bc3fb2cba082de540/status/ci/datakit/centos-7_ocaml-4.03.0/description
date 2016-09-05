@@ -1,1 +1,1 @@
-docker run mirageci2:0d82b50ced15bdeba4957d6486f9021f opam list -s --depends-on mirage
+OK (centos-7/4.03.0)
