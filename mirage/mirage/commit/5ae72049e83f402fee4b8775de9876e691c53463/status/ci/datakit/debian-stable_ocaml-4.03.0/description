@@ -1,1 +1,1 @@
-sha256:9b48f20c3031f72eeca029447f855fe73148c5663b5b28a4185464148cef0a18
+docker run mirageci2:d9c6f936d53c4f5de872514e69979c5f opam list -s --depends-on mirage
