@@ -1,1 +1,1 @@
-Building 9dc5ecffc6747fe35795566f5d4139b7
+docker run mirageci2:9dc5ecffc6747fe35795566f5d4139b7 opam list -s --depends-on mirage
