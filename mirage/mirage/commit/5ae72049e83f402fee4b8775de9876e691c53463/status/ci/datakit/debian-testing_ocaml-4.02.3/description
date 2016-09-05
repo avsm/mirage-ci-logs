@@ -1,1 +1,1 @@
-docker run mirageci2:5017be8a8396728c606383a1f352ab0b opam list -s --depends-on mirage
+OK (debian-testing/4.02.3)
