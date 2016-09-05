@@ -1,1 +1,1 @@
-docker run mirageci2:14a810a47ea5815d7f1e4cf47644bc73 opam list -s --depends-on mirage
+OK (ubuntu-16.04/4.03.0)
