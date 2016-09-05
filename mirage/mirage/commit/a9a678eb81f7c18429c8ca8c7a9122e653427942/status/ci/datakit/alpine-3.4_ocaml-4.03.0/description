@@ -1,1 +1,1 @@
-docker run mirageci2:ad9ee7837a24795f866e82eec2e0a03a opam list -s --depends-on mirage
+OK (alpine-3.4/4.03.0)
