@@ -1,1 +1,1 @@
-Wait
+docker run mirageci2:7091a0b6d327b3cd1ac73e9fcc5b787d opam list -s --depends-on mirage
