@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:550 (opensuse-42.1/4.03.0/opam-repo:6cefd96367abc78d4ce13f081c8b7dd1552a76f6)
+[2016-09-05 16:52.58] Starting...
+[2016-09-05 16:52.58] Building Dockerfile for installing mirage (opensuse-42.1 4.03.0)
+FROM ocaml/opam:opensuse-42.1_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 6cefd96367abc78d4ce13f081c8b7dd1552a76f6
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/550/head:cibranch
+RUN git checkout 82c1992b583720db9b34942bc1980d8733d01930
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-05 16:52.58] Success
