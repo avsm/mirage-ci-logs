@@ -1,1 +1,1 @@
-docker run mirageci2:5017be8a8396728c606383a1f352ab0b opam list -s --depends-on mirage
+Wait debian-testing_ocaml-4.02.3
