@@ -1,1 +1,1 @@
-Wait ubuntu-16.04_ocaml-4.03.0
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=acb5a044f7870abc2add0b42a1c6541e --label com.docker.datakit.builton=1473171488.1 -t mirageci2:acb5a044f7870abc2add0b42a1c6541e --no-cache --rm --force-rm - < /tmp/tmp-60a06d5/Dockerfile" exited with status 1

@@ -1,1 +1,1 @@
-Wait debian-stable_ocaml-4.03.0
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=d9c6f936d53c4f5de872514e69979c5f --label com.docker.datakit.builton=1473170461.33 -t mirageci2:d9c6f936d53c4f5de872514e69979c5f --no-cache --rm --force-rm - < /tmp/tmp-157e011a/Dockerfile" exited with status 1
