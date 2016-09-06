@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:526 (debian-testing/4.02.3/opam-repo:71101141df2dc0410d44609e8149218ad1092b72)
+[2016-09-06 17:31.38] Starting...
+[2016-09-06 17:31.38] Building Dockerfile for installing mirage (debian-testing 4.02.3)
+FROM ocaml/opam:debian-testing_ocaml-4.02.3
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 71101141df2dc0410d44609e8149218ad1092b72
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin pull/526/head:cibranch
+RUN git checkout 581364d405e47db9eb45bef07f4f74487de40400
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-06 17:31.38] Success
