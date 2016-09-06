@@ -1,0 +1,139 @@
+=== Building 3e1adfc8f942b26bda6068e32a8b5705
+[2016-09-06 13:09.13] Starting...
+[2016-09-06 13:09.13] Waiting for free pool slot to build 3e1adfc8f942b26bda6068e32a8b5705
+[2016-09-06 13:09.13] Pool slot obtained, starting build of 3e1adfc8f942b26bda6068e32a8b5705
+[2016-09-06 13:09.13] Building container for 3e1adfc8f942b26bda6068e32a8b5705
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in 7f2144fb11f0
+ ---> 49a510d091b5
+Removing intermediate container 7f2144fb11f0
+Step 3 : RUN git pull origin master &&   git checkout 6cefd96367abc78d4ce13f081c8b7dd1552a76f6 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src
+ ---> Running in 3c4cf6f7a276
+[91mFrom git://github.com/ocaml/opam-repository
+ * branch            master     -> FETCH_HEAD
+[0m[91m   445f96e..7110114  master     -> origin/master
+[0mUpdating 445f96e..7110114
+Fast-forward
+ .../4.04.0+beta2+flambda/4.04.0+beta2+flambda.comp | 15 ++++++++++
+ .../4.04.0+beta2+flambda.descr                     |  1 +
+ compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.comp    | 15 ++++++++++
+ compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.descr   |  1 +
+ packages/ISO8601/ISO8601.0.2.5/descr               |  1 +
+ packages/ISO8601/ISO8601.0.2.5/findlib             |  1 +
+ packages/ISO8601/ISO8601.0.2.5/opam                | 29 ++++++++++++++++++
+ packages/ISO8601/ISO8601.0.2.5/url                 |  2 ++
+ packages/flow_parser/flow_parser.0.32.0/descr      |  6 ++++
+ packages/flow_parser/flow_parser.0.32.0/opam       | 34 ++++++++++++++++++++++
+ packages/flow_parser/flow_parser.0.32.0/url        |  2 ++
+ packages/flowcaml/flowcaml.1.07/opam               |  2 --
+ packages/frama-c-base/frama-c-base.20160501/opam   |  2 +-
+ packages/ppx_bitstring/ppx_bitstring.1.0.0/opam    |  1 +
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/descr   |  1 +
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/opam    | 22 ++++++++++++++
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/url     |  2 ++
+ packages/ptmap/ptmap.2.0.1/descr                   |  1 +
+ packages/ptmap/ptmap.2.0.1/findlib                 |  1 +
+ packages/ptmap/ptmap.2.0.1/opam                    | 22 ++++++++++++++
+ packages/ptmap/ptmap.2.0.1/url                     |  2 ++
+ 21 files changed, 160 insertions(+), 3 deletions(-)
+ create mode 100644 compilers/4.04.0/4.04.0+beta2+flambda/4.04.0+beta2+flambda.comp
+ create mode 100644 compilers/4.04.0/4.04.0+beta2+flambda/4.04.0+beta2+flambda.descr
+ create mode 100644 compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.comp
+ create mode 100644 compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.descr
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/descr
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/findlib
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/opam
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/url
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/descr
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/opam
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/url
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/descr
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/opam
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/url
+ create mode 100644 packages/ptmap/ptmap.2.0.1/descr
+ create mode 100644 packages/ptmap/ptmap.2.0.1/findlib
+ create mode 100644 packages/ptmap/ptmap.2.0.1/opam
+ create mode 100644 packages/ptmap/ptmap.2.0.1/url
+[91mNote: checking out '6cefd96367abc78d4ce13f081c8b7dd1552a76f6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6cefd96... Merge pull request #7327 from damiendoligez/flowcaml-undo-bound
+[0m
+=-=- Updating package repositories =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[default: local] Command started
+[default: local] Command started
+[default: local] Command started
+[default] /home/opam/opam-repository synchronized
+[91mCloning into '/home/opam/src'...
+[0m ---> ded10b6b9ad4
+Removing intermediate container 3c4cf6f7a276
+Step 4 : WORKDIR /home/opam/src
+ ---> Running in f308bddc905a
+ ---> 6f383fa22b66
+Removing intermediate container f308bddc905a
+Step 5 : RUN git fetch origin pull/558/head:cibranch &&   git checkout 9f190fe4dd30c9aa6a09eb60f1cb3ede752806fa &&   opam pin add -n mirage /home/opam/src &&   opam depext -uy mirage &&   opam install -j 2 -vy mirage
+ ---> Running in 531355eb3e08
+[91mFrom git://github.com/mirage/mirage
+ * [new ref]         refs/pull/558/head -> cibranch
+[0m[91mNote: checking out '9f190fe4dd30c9aa6a09eb60f1cb3ede752806fa'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 9f190fe... fix opam
+[0mmirage is now path-pinned to /home/opam/src
+
+[mirage: local]
+[mirage] /home/opam/src/ synchronized
+[mirage] Installing new package description from /home/opam/src
+
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add m4
+(1/1) Installing m4 (1.4.17-r1)
+Executing busybox-1.24.2-r11.trigger
+OK: 435 MiB in 84 packages
+# OS packages installation successful
+
+=-=- Synchronising pinned packages =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage: local] Command started
+[mirage] /home/opam/src/ already up-to-date
+The following dependencies couldn't be met:
+  - mirage -> mirage-types-lwt >= 3.0.0
+Your request can't be satisfied:
+  - No package matches mirage-types-lwt>=3.0.0.
+
+No solution found, exiting
+[91m'opam install -j 2 -vy mirage' failed.
+[0mRemoving intermediate container 531355eb3e08
+The command '/bin/sh -c git fetch origin pull/558/head:cibranch &&   git checkout 9f190fe4dd30c9aa6a09eb60f1cb3ede752806fa &&   opam pin add -n mirage /home/opam/src &&   opam depext -uy mirage &&   opam install -j 2 -vy mirage' returned a non-zero code: 3
+[2016-09-06 13:11.12] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=3e1adfc8f942b26bda6068e32a8b5705 --label com.docker.datakit.builton=1473167353.41 -t mirageci2:3e1adfc8f942b26bda6068e32a8b5705 --no-cache --rm --force-rm - < /tmp/tmp-2b23c5d4/Dockerfile" exited with status 3
