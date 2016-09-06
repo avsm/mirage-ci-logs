@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=9dc5ecffc6747fe35795566f5d4139b7 --label com.docker.datakit.builton=1473171491.3 -t mirageci2:9dc5ecffc6747fe35795566f5d4139b7 --no-cache --rm --force-rm - < /tmp/tmp-37d24d84/Dockerfile" exited with status 66
+Wait centos-7_ocaml-4.03.0
