@@ -1,0 +1,50 @@
+=== Building b9b241469fd3059a5d1afc333fd2d47e
+[2016-09-06 16:56.00] Starting...
+[2016-09-06 16:56.01] Waiting for free pool slot to build b9b241469fd3059a5d1afc333fd2d47e
+[2016-09-06 16:56.01] Pool slot obtained, starting build of b9b241469fd3059a5d1afc333fd2d47e
+[2016-09-06 16:56.01] Building container for b9b241469fd3059a5d1afc333fd2d47e
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:4a462ed3390d7d76bd366ffd362202faee60a89417d113276a7abeba20ec4f7e
+ ---> 4a462ed3390d
+Step 2 : RUN opam depext -uiyv -j 2 mirage-fs
+ ---> Running in 57d3224c248a
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# All required OS packages found.
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install mirage-fs 0.6.0
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: http] Command started
+[mirage-fs: http] Command started
+[mirage-fs.0.6.0] https://github.com/mirage/mirage-fs/archive/v0.6.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: make all] Command started
++ make "all" (CWD=/home/opam/.opam/4.03.0/build/mirage-fs.0.6.0)
+- cd crunch && ocamlbuild  crunch.native
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamldep.opt -modules crunch.ml > crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c -o crunch.cmo crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt -c -o crunch.cmx crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c custom_unix_stubs.c
+- /home/opam/.opam/4.03.0/bin/ocamlmklib -o crunch custom_unix_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa crunch.cmx libcrunch.a -o crunch.native
+-> installed mirage-fs.0.6.0
+Done.
+ ---> 916d23a9b4ab
+Removing intermediate container 57d3224c248a
+Step 3 : LABEL "com.docker.datakit.builton" "1473180961.05" "com.docker.datakit.digest" "b9b241469fd3059a5d1afc333fd2d47e"
+ ---> Running in 37b2d53e5620
+ ---> 324fb3b2fe64
+Removing intermediate container 37b2d53e5620
+Successfully built 324fb3b2fe64
+Recorded container with tag mirageci2:b9b241469fd3059a5d1afc333fd2d47e (sha256:324fb3b2fe64c6bbf01f32da622a5a06b3bc89d74d91f00e0e7f46d1ff670d92
+)[2016-09-06 17:01.05] Success
