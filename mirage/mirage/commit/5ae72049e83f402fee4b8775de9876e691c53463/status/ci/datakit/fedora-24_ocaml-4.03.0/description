@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=82eb6ff6bd7db81d0f904e66572a7ef3 --label com.docker.datakit.builton=1473094147.43 -t mirageci2:82eb6ff6bd7db81d0f904e66572a7ef3 --no-cache --rm --force-rm --pull - < /tmp/tmp-33d87db9/Dockerfile" exited with status 1
+Wait fedora-24_ocaml-4.03.0
