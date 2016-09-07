@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:tags/v2.1.1 (centos-7/4.03.0/opam-repo:71101141df2dc0410d44609e8149218ad1092b72)
+[2016-09-07 15:07.44] Starting...
+[2016-09-07 15:07.44] Building Dockerfile for installing mirage (centos-7 4.03.0)
+FROM ocaml/opam:centos-7_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 71101141df2dc0410d44609e8149218ad1092b72
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin tags/v2.1.1:cibranch
+RUN git checkout f5cf5d5a47fc4015a20bbb4a6a5206aba5e00920
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-07 15:07.44] Success
