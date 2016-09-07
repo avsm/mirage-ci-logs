@@ -1,1 +1,1 @@
-Ok (mirage-fs,mirage-seal,nbd) Err (imaplet-lwt,tftp)
+Ok (mirage-fs,mirage-seal) Err (imaplet-lwt,mirage-www,nbd,tftp)
