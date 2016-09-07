@@ -1,0 +1,19 @@
+=== Building df3eb9a05d99f62a4f5605fe3bde0b4e
+[2016-09-07 14:16.52] Starting...
+[2016-09-07 14:16.52] Waiting for free pool slot to build df3eb9a05d99f62a4f5605fe3bde0b4e
+[2016-09-07 14:16.52] Pool slot obtained, starting build of df3eb9a05d99f62a4f5605fe3bde0b4e
+[2016-09-07 14:16.52] Building container for df3eb9a05d99f62a4f5605fe3bde0b4e
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in 5357b2149184
+ ---> 21c8773121dd
+Removing intermediate container 5357b2149184
+Step 3 : RUN git pull origin master &&   git checkout 71101141df2dc0410d44609e8149218ad1092b72 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src
+ ---> Running in 7b5c9fb4616e
+[91mfatal: remote error: 
+  
+[0mRemoving intermediate container 7b5c9fb4616e
+The command '/bin/sh -c git pull origin master &&   git checkout 71101141df2dc0410d44609e8149218ad1092b72 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src' returned a non-zero code: 1
+[2016-09-07 14:19.08] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=df3eb9a05d99f62a4f5605fe3bde0b4e --label com.docker.datakit.builton=1473257812.41 -t mirageci2:df3eb9a05d99f62a4f5605fe3bde0b4e --no-cache --rm --force-rm - < /tmp/tmp-37e253c5/Dockerfile" exited with status 1
