@@ -1,0 +1,48 @@
+=== Building cebc0d94ba98503f846fe6921851bdb1
+[2016-09-07 20:45.53] Starting...
+[2016-09-07 20:45.53] Waiting for free pool slot to build cebc0d94ba98503f846fe6921851bdb1
+[2016-09-07 22:10.42] Pool slot obtained, starting build of cebc0d94ba98503f846fe6921851bdb1
+[2016-09-07 22:10.42] Building container for cebc0d94ba98503f846fe6921851bdb1
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:97ae385febdcfbe61ed3d886fdb2e7424c6d227a788856e9abde7e0b99eb9ce3
+ ---> 97ae385febdc
+Step 2 : RUN opam depext -uiyv -j 2 mirage-fs
+ ---> Running in 1cf044a85a54
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# All required OS packages found.
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install mirage-fs 0.6.0
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: http] Command started
+[mirage-fs: http] Command started
+[mirage-fs.0.6.0] https://github.com/mirage/mirage-fs/archive/v0.6.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: make all] Command started
++ make "all" (CWD=/home/opam/.opam/4.03.0/build/mirage-fs.0.6.0)
+- cd crunch && ocamlbuild  crunch.native
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamldep.opt -modules crunch.ml > crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c -o crunch.cmo crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt -c -o crunch.cmx crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c custom_unix_stubs.c
+- /home/opam/.opam/4.03.0/bin/ocamlmklib -o crunch custom_unix_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa crunch.cmx libcrunch.a -o crunch.native
+-> installed mirage-fs.0.6.0
+Done.
+ ---> 44a074a801cd
+Removing intermediate container 1cf044a85a54
+Step 3 : LABEL "com.docker.datakit.builton" "1473286242.88" "com.docker.datakit.digest" "cebc0d94ba98503f846fe6921851bdb1"
+ ---> Running in 8e1ba4dadbf2
+Removing intermediate container 8e1ba4dadbf2
+error creating zfs mount of zpool-docker/docker/86dcbfe6b37c740124c9fca6f78641966aacd7e3432ed642e581338da51b78be to /var/lib/docker/zfs/graph/86dcbfe6b37c740124c9fca6f78641966aacd7e3432ed642e581338da51b78be: device or resource busy
+[2016-09-07 22:27.21] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=cebc0d94ba98503f846fe6921851bdb1 --label com.docker.datakit.builton=1473286242.88 -t mirageci2:cebc0d94ba98503f846fe6921851bdb1 --no-cache --rm --force-rm - < /tmp/tmp-2c3dc879/Dockerfile" exited with status 1
