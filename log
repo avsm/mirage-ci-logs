@@ -1,0 +1,51 @@
+=== Building 3f8977e2bbd4ee2414d9528e11eda5b2
+[2016-09-07 19:40.46] Starting...
+[2016-09-07 19:40.46] Waiting for free pool slot to build 3f8977e2bbd4ee2414d9528e11eda5b2
+[2016-09-07 20:04.38] Pool slot obtained, starting build of 3f8977e2bbd4ee2414d9528e11eda5b2
+[2016-09-07 20:04.38] Building container for 3f8977e2bbd4ee2414d9528e11eda5b2
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:9ee97be2284eaf0790f02fec23a32a722855f92167a2ab992c259b4c0841c472
+ ---> 9ee97be2284e
+Step 2 : RUN opam depext -uiyv -j 2 tftp
+ ---> Running in b2acd85cbe6b
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: linux-headers
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add linux-headers
+(1/1) Installing linux-headers (4.4.6-r1)
+OK: 440 MiB in 85 packages
+# OS packages installation successful
+# Now letting OPAM install the packages
+The following dependencies couldn't be met:
+  - tftp -> cstruct (>= 1.0.1 & < 2.0.0) -> sexplib < 113.01.00
+  - tftp -> mirage >= 2.5.0 -> io-page >= 1.4.0 -> cstruct >= 1.1.0 -> sexplib < 113.01.00
+  - tftp -> mirage >= 2.5.0 -> cstruct >= 1.0.1 -> sexplib < 113.01.00
+  - tftp -> mirage-console -> mirage-types-lwt -> cstruct >= 1.4.0 -> sexplib < 113.01.00
+  - tftp -> mirage-console -> mirage-types-lwt -> sexplib < 113.01.00
+Your request can't be satisfied:
+  - Conflicting version constraints for cstruct
+  - sexplib<113.01.00 is not available because your system doesn't comply with ocaml-version >= "4.02.1" & ocaml-version < "4.03".
+
+No solution found, exiting
+[91m'opam install --verbose --yes --jobs=2 tftp' failed.
+[0mRemoving intermediate container b2acd85cbe6b
+The command '/bin/sh -c opam depext -uiyv -j 2 tftp' returned a non-zero code: 3
+[2016-09-07 20:15.40] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=3f8977e2bbd4ee2414d9528e11eda5b2 --label com.docker.datakit.builton=1473278678.59 -t mirageci2:3f8977e2bbd4ee2414d9528e11eda5b2 --no-cache --rm --force-rm - < /tmp/tmp-34cf6dcb/Dockerfile" exited with status 3
