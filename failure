@@ -1,0 +1,1 @@
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=404856556764db60fc2860248dbd95b9 --label com.docker.datakit.builton=1473279443.78 -t mirageci2:404856556764db60fc2860248dbd95b9 --no-cache --rm --force-rm - < /tmp/tmp-804fdb7/Dockerfile" exited with status 3
