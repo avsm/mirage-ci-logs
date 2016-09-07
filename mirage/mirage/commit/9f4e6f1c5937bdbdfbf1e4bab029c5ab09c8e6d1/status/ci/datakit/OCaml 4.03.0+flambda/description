@@ -1,1 +1,1 @@
-Wait OCaml 4.03.0+flambda
+(Allowed failure) Command "sh" "-c" "docker build --label com.docker.datakit.digest=45eab10ec99b3de5a14b61a1ffc8bd52 --label com.docker.datakit.builton=1473277256.09 -t mirageci2:45eab10ec99b3de5a14b61a1ffc8bd52 --no-cache --rm --force-rm - < /tmp/tmp-a678ac1/Dockerfile" exited with status 1
