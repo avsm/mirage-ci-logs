@@ -1,0 +1,168 @@
+=== Building 17a70b45242b803f1f8e7da623648d4a
+[2016-09-07 18:39.11] Starting...
+[2016-09-07 18:39.11] Waiting for free pool slot to build 17a70b45242b803f1f8e7da623648d4a
+[2016-09-07 19:24.53] Pool slot obtained, starting build of 17a70b45242b803f1f8e7da623648d4a
+[2016-09-07 19:24.53] Building container for 17a70b45242b803f1f8e7da623648d4a
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in 939f38b8bfef
+ ---> 344c8c59216d
+Removing intermediate container 939f38b8bfef
+Step 3 : RUN git pull origin master &&   git checkout 1e3b3ca0d47f9bebe4e8f4b24703ca438336163a &&   opam remote add extra1 https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src
+ ---> Running in 97ee9bf88926
+[91mFrom git://github.com/ocaml/opam-repository
+ * branch            master     -> FETCH_HEAD
+[0m[91m   445f96e..1e3b3ca  master     -> origin/master
+[0mUpdating 445f96e..1e3b3ca
+Fast-forward
+ .../4.04.0+beta2+flambda/4.04.0+beta2+flambda.comp | 15 +++++++++
+ .../4.04.0+beta2+flambda.descr                     |  1 +
+ compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.comp    | 15 +++++++++
+ compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.descr   |  1 +
+ packages/ISO8601/ISO8601.0.2.5/descr               |  1 +
+ packages/ISO8601/ISO8601.0.2.5/findlib             |  1 +
+ packages/ISO8601/ISO8601.0.2.5/opam                | 29 +++++++++++++++++
+ packages/ISO8601/ISO8601.0.2.5/url                 |  2 ++
+ packages/ctypes/ctypes.0.6.3/descr                 | 18 +++++++++++
+ packages/ctypes/ctypes.0.6.3/findlib               |  1 +
+ packages/ctypes/ctypes.0.6.3/opam                  | 32 +++++++++++++++++++
+ packages/ctypes/ctypes.0.6.3/url                   |  2 ++
+ packages/ctypes/ctypes.0.7.1/descr                 | 18 +++++++++++
+ packages/ctypes/ctypes.0.7.1/findlib               |  1 +
+ packages/ctypes/ctypes.0.7.1/opam                  | 37 ++++++++++++++++++++++
+ packages/ctypes/ctypes.0.7.1/url                   |  2 ++
+ packages/ctypes/ctypes.0.8.1/descr                 | 18 +++++++++++
+ packages/ctypes/ctypes.0.8.1/findlib               |  1 +
+ packages/ctypes/ctypes.0.8.1/opam                  | 37 ++++++++++++++++++++++
+ packages/ctypes/ctypes.0.8.1/url                   |  2 ++
+ packages/ctypes/ctypes.0.9.1/descr                 | 18 +++++++++++
+ packages/ctypes/ctypes.0.9.1/findlib               |  1 +
+ packages/ctypes/ctypes.0.9.1/opam                  | 37 ++++++++++++++++++++++
+ packages/ctypes/ctypes.0.9.1/url                   |  2 ++
+ packages/dolmen/dolmen.0.1/descr                   |  7 ++++
+ packages/dolmen/dolmen.0.1/opam                    | 17 ++++++++++
+ packages/dolmen/dolmen.0.1/url                     |  2 ++
+ packages/flow_parser/flow_parser.0.32.0/descr      |  6 ++++
+ packages/flow_parser/flow_parser.0.32.0/opam       | 34 ++++++++++++++++++++
+ packages/flow_parser/flow_parser.0.32.0/url        |  2 ++
+ packages/flowcaml/flowcaml.1.07/opam               |  2 --
+ packages/frama-c-base/frama-c-base.20160501/opam   |  2 +-
+ .../hardcaml-waveterm/hardcaml-waveterm.0.1.0/opam |  5 +--
+ packages/ppx_bitstring/ppx_bitstring.1.0.0/opam    |  1 +
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/descr   |  1 +
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/opam    | 22 +++++++++++++
+ packages/ppx_bitstring/ppx_bitstring.1.0.1/url     |  2 ++
+ .../ppx_type_conv.113.33.02+4.03/descr             |  2 ++
+ .../ppx_type_conv.113.33.02+4.03/opam              | 20 ++++++++++++
+ .../ppx_type_conv/ppx_type_conv.113.33.02+4.03/url |  2 ++
+ packages/ptmap/ptmap.2.0.1/descr                   |  1 +
+ packages/ptmap/ptmap.2.0.1/findlib                 |  1 +
+ packages/ptmap/ptmap.2.0.1/opam                    | 22 +++++++++++++
+ packages/ptmap/ptmap.2.0.1/url                     |  2 ++
+ packages/rdf/rdf.0.10.0/opam                       |  2 +-
+ packages/rdf/rdf.0.2/opam                          |  1 +
+ packages/rdf/rdf.0.3/opam                          |  1 +
+ packages/rdf/rdf.0.4/opam                          |  1 +
+ packages/rdf/rdf.0.5/opam                          |  2 +-
+ packages/rdf/rdf.0.7.0/opam                        |  2 +-
+ packages/rdf/rdf.0.7.1/opam                        |  2 +-
+ packages/rdf/rdf.0.8.0/opam                        |  2 +-
+ packages/rdf/rdf.0.9.0/opam                        |  2 +-
+ packages/zmq/zmq.4.0-7/descr                       |  1 +
+ packages/zmq/zmq.4.0-7/findlib                     |  1 +
+ packages/zmq/zmq.4.0-7/opam                        | 26 +++++++++++++++
+ packages/zmq/zmq.4.0-7/url                         |  2 ++
+ 57 files changed, 479 insertions(+), 11 deletions(-)
+ create mode 100644 compilers/4.04.0/4.04.0+beta2+flambda/4.04.0+beta2+flambda.comp
+ create mode 100644 compilers/4.04.0/4.04.0+beta2+flambda/4.04.0+beta2+flambda.descr
+ create mode 100644 compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.comp
+ create mode 100644 compilers/4.04.0/4.04.0+beta2/4.04.0+beta2.descr
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/descr
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/findlib
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/opam
+ create mode 100644 packages/ISO8601/ISO8601.0.2.5/url
+ create mode 100644 packages/ctypes/ctypes.0.6.3/descr
+ create mode 100644 packages/ctypes/ctypes.0.6.3/findlib
+ create mode 100644 packages/ctypes/ctypes.0.6.3/opam
+ create mode 100644 packages/ctypes/ctypes.0.6.3/url
+ create mode 100644 packages/ctypes/ctypes.0.7.1/descr
+ create mode 100644 packages/ctypes/ctypes.0.7.1/findlib
+ create mode 100644 packages/ctypes/ctypes.0.7.1/opam
+ create mode 100644 packages/ctypes/ctypes.0.7.1/url
+ create mode 100644 packages/ctypes/ctypes.0.8.1/descr
+ create mode 100644 packages/ctypes/ctypes.0.8.1/findlib
+ create mode 100644 packages/ctypes/ctypes.0.8.1/opam
+ create mode 100644 packages/ctypes/ctypes.0.8.1/url
+ create mode 100644 packages/ctypes/ctypes.0.9.1/descr
+ create mode 100644 packages/ctypes/ctypes.0.9.1/findlib
+ create mode 100644 packages/ctypes/ctypes.0.9.1/opam
+ create mode 100644 packages/ctypes/ctypes.0.9.1/url
+ create mode 100644 packages/dolmen/dolmen.0.1/descr
+ create mode 100644 packages/dolmen/dolmen.0.1/opam
+ create mode 100644 packages/dolmen/dolmen.0.1/url
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/descr
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/opam
+ create mode 100644 packages/flow_parser/flow_parser.0.32.0/url
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/descr
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/opam
+ create mode 100644 packages/ppx_bitstring/ppx_bitstring.1.0.1/url
+ create mode 100644 packages/ppx_type_conv/ppx_type_conv.113.33.02+4.03/descr
+ create mode 100644 packages/ppx_type_conv/ppx_type_conv.113.33.02+4.03/opam
+ create mode 100644 packages/ppx_type_conv/ppx_type_conv.113.33.02+4.03/url
+ create mode 100644 packages/ptmap/ptmap.2.0.1/descr
+ create mode 100644 packages/ptmap/ptmap.2.0.1/findlib
+ create mode 100644 packages/ptmap/ptmap.2.0.1/opam
+ create mode 100644 packages/ptmap/ptmap.2.0.1/url
+ create mode 100644 packages/zmq/zmq.4.0-7/descr
+ create mode 100644 packages/zmq/zmq.4.0-7/findlib
+ create mode 100644 packages/zmq/zmq.4.0-7/opam
+ create mode 100644 packages/zmq/zmq.4.0-7/url
+[91mNote: checking out '1e3b3ca0d47f9bebe4e8f4b24703ca438336163a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1e3b3ca... Merge pull request #7371 from andersfugmann/zmq
+[0m[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1: git]
+[extra1] https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 updated
+
+=-=- Updating package repositories =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[default: local] Command started
+[extra1: git] Command started
+[default: local] Command started
+[extra1: git] Command started
+[extra1: git] Command started
+[extra1: git] Command started
+[extra1] https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 already up-to-date
+[default: local] Command started
+[default] /home/opam/opam-repository synchronized
+[91mCloning into '/home/opam/src'...
+[0m ---> 9b4ce7eb9526
+Removing intermediate container 97ee9bf88926
+Step 4 : WORKDIR /home/opam/src
+ ---> Running in 69b657ec50ac
+ ---> 012e6fd02150
+Removing intermediate container 69b657ec50ac
+Step 5 : RUN git fetch origin tags/v2.4.0:cibranch &&   git checkout f1c565e8fc5ab4939eafe724cded45854fe87ff1 &&   opam pin add -n mirage /home/opam/src &&   opam depext -uy mirage &&   opam install -j 2 -vy mirage
+ ---> Running in d0ad26a6b21e
+[91merror: cannot update the ref 'refs/heads/cibranch': Trying to write non-commit object f1c565e8fc5ab4939eafe724cded45854fe87ff1 to branch refs/heads/cibranch
+From git://github.com/mirage/mirage
+ ! [new tag]         v2.4.0     -> cibranch  (unable to update local ref)
+[0mRemoving intermediate container d0ad26a6b21e
+The command '/bin/sh -c git fetch origin tags/v2.4.0:cibranch &&   git checkout f1c565e8fc5ab4939eafe724cded45854fe87ff1 &&   opam pin add -n mirage /home/opam/src &&   opam depext -uy mirage &&   opam install -j 2 -vy mirage' returned a non-zero code: 1
+[2016-09-07 19:50.45] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=17a70b45242b803f1f8e7da623648d4a --label com.docker.datakit.builton=1473276293.55 -t mirageci2:17a70b45242b803f1f8e7da623648d4a --no-cache --rm --force-rm - < /tmp/tmp-17ab3f10/Dockerfile" exited with status 1
