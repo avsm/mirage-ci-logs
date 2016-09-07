@@ -1,0 +1,10 @@
+=== Building 5c774f704926d305ea9316e4da2fc181
+[2016-09-07 22:37.28] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:4a083c6a3faff209bd1a41e1225cd6f401ee1f4e8af4ea130b4f353add0bf04e
+ ---> 4a083c6a3faf
+Step 2 : RUN opam depext -uiyv -j 2 nbd
+ ---> Running in 6844a66db836
+Removing intermediate container 6844a66db836
+write /var/lib/docker/containers/6844a66db8361a7fba0cd77388a9bc4dfb05fc8882f2692ef45b7d53a2ff2751/hosts: no space left on device
+[2016-09-07 23:28.36] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=5c774f704926d305ea9316e4da2fc181 --label com.docker.datakit.builton=1473287848.83 -t mirageci2:5c774f704926d305ea9316e4da2fc181 --no-cache --rm --force-rm - < /tmp/tmp-2175f0d1/Dockerfile" exited with status 1
