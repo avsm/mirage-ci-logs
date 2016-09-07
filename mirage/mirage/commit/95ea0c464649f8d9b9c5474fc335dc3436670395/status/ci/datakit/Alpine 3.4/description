@@ -1,1 +1,1 @@
-Wait Alpine 3.4
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=91931bf437351a7a9a37128bd1203852 --label com.docker.datakit.builton=1473257827.02 -t mirageci2:91931bf437351a7a9a37128bd1203852 --no-cache --rm --force-rm - < /tmp/tmp-2b277cbc/Dockerfile" exited with status 4
