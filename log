@@ -1,0 +1,13 @@
+=== Building 9ace1004527c68350724cb5818c9a4ef
+[2016-09-07 19:45.48] Starting...
+[2016-09-07 19:45.48] Waiting for free pool slot to build 9ace1004527c68350724cb5818c9a4ef
+[2016-09-07 20:26.39] Pool slot obtained, starting build of 9ace1004527c68350724cb5818c9a4ef
+[2016-09-07 20:26.39] Building container for 9ace1004527c68350724cb5818c9a4ef
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:584a3daa372b286b2e0fc86c091c23c7c1473e429695853274657a2b6d238a29
+ ---> 584a3daa372b
+Step 2 : RUN opam depext -uiyv -j 2 mirage-seal
+ ---> Running in 19bbb77e8a29
+Removing intermediate container 19bbb77e8a29
+error creating zfs mount of zpool-docker/docker/a52505a0f83b03496ce92d3a00a668d9a2faf63eb136fdab2ba74615dfa2fe8e to /var/lib/docker/zfs/graph/a52505a0f83b03496ce92d3a00a668d9a2faf63eb136fdab2ba74615dfa2fe8e: device or resource busy
+[2016-09-07 20:36.40] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=9ace1004527c68350724cb5818c9a4ef --label com.docker.datakit.builton=1473279999.76 -t mirageci2:9ace1004527c68350724cb5818c9a4ef --no-cache --rm --force-rm - < /tmp/tmp-162f150c/Dockerfile" exited with status 1
