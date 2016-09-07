@@ -1,0 +1,17 @@
+=== Building c4a1445b016ddbd09aae569e2a42d0e5
+[2016-09-07 18:37.35] Starting...
+[2016-09-07 18:37.35] Waiting for free pool slot to build c4a1445b016ddbd09aae569e2a42d0e5
+[2016-09-07 18:48.41] Pool slot obtained, starting build of c4a1445b016ddbd09aae569e2a42d0e5
+[2016-09-07 18:48.41] Building container for c4a1445b016ddbd09aae569e2a42d0e5
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in 4e3bb79058d8
+ ---> 7a0e815131f2
+Removing intermediate container 4e3bb79058d8
+Step 3 : RUN git pull origin master &&   git checkout 1e3b3ca0d47f9bebe4e8f4b24703ca438336163a &&   opam remote add extra1 https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src
+ ---> Running in 319fc890b0ef
+Removing intermediate container 319fc890b0ef
+error creating zfs mount of zpool-docker/docker/e394f8b3f04d4c78cb29b73333d3b50da96f7629d806028a686aab947ab30a7b to /var/lib/docker/zfs/graph/e394f8b3f04d4c78cb29b73333d3b50da96f7629d806028a686aab947ab30a7b: device or resource busy
+[2016-09-07 18:58.02] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=c4a1445b016ddbd09aae569e2a42d0e5 --label com.docker.datakit.builton=1473274121.79 -t mirageci2:c4a1445b016ddbd09aae569e2a42d0e5 --no-cache --rm --force-rm - < /tmp/tmp-84342f5/Dockerfile" exited with status 1
