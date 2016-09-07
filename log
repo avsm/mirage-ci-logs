@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:heads/async-udp (alpine-3.4/4.03.0/opam-repo:71101141df2dc0410d44609e8149218ad1092b72)
+[2016-09-07 14:16.32] Starting...
+[2016-09-07 14:16.32] Building Dockerfile for installing mirage (alpine-3.4 4.03.0)
+FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 71101141df2dc0410d44609e8149218ad1092b72
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin heads/async-udp:cibranch
+RUN git checkout b07730c3f3bca562b68209bfb253718fead53aed
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-07 14:16.32] Success
