@@ -1,0 +1,9 @@
+=== Building 45eab10ec99b3de5a14b61a1ffc8bd52
+[2016-09-07 19:21.26] Starting...
+[2016-09-07 19:21.26] Waiting for free pool slot to build 45eab10ec99b3de5a14b61a1ffc8bd52
+[2016-09-07 19:40.56] Pool slot obtained, starting build of 45eab10ec99b3de5a14b61a1ffc8bd52
+[2016-09-07 19:40.56] Building container for 45eab10ec99b3de5a14b61a1ffc8bd52
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0+flambda
+Error parsing reference: "ocaml/opam:alpine-3.4_ocaml-4.03.0+flambda" is not a valid repository/tag
+[2016-09-07 19:40.56] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=45eab10ec99b3de5a14b61a1ffc8bd52 --label com.docker.datakit.builton=1473277256.09 -t mirageci2:45eab10ec99b3de5a14b61a1ffc8bd52 --no-cache --rm --force-rm - < /tmp/tmp-a678ac1/Dockerfile" exited with status 1
