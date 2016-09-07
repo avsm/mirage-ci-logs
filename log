@@ -1,0 +1,11 @@
+=== docker run mirageci2:1430bb0e4915443ef4d4d43d9a5c3cb3 opam list -s --depends-on mirage
+[2016-09-07 14:43.23] Starting...
+[2016-09-07 14:43.23] Waiting for free pool slot to run
+[2016-09-07 14:47.46] Pool slot obtained, starting run
+[2016-09-07 14:47.46] docker run mirageci2:1430bb0e4915443ef4d4d43d9a5c3cb3 opam list -s --depends-on mirage
+imaplet-lwt
+mirage-fs
+mirage-seal
+nbd
+tftp
+[2016-09-07 14:51.44] Success
