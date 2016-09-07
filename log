@@ -1,0 +1,371 @@
+=== Building d4664595673b181b1e36aa027a22c786
+[2016-09-07 16:09.37] Starting...
+[2016-09-07 16:09.37] Waiting for free pool slot to build d4664595673b181b1e36aa027a22c786
+[2016-09-07 17:09.52] Pool slot obtained, starting build of d4664595673b181b1e36aa027a22c786
+[2016-09-07 17:09.52] Building container for d4664595673b181b1e36aa027a22c786
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:a0d17411851d346bfe23c2df8a3934acedf65595ea63c60e5b84d45910b2b473
+ ---> a0d17411851d
+Step 2 : RUN opam depext -uiyv -j 2 mirage-fs
+ ---> Running in 80d80f08d4a1
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+m4
+# All required OS packages found.
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install ocplib-endian 1.0                                   [required by cstruct]
+  - install cstruct       2.3.0                                 [required by mirage-fs]
+  - install mirage-fs     0.6.0
+===== 3 to install =====
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[cstruct: http] Command started
+[mirage-fs: http] Command started
+[ocplib-endian: http] Command started
+[mirage-fs: http] Command started
+[mirage-fs.0.6.0] https://github.com/mirage/mirage-fs/archive/v0.6.0.tar.gz downloaded
+[ocplib-endian: http] Command started
+[ocplib-endian.1.0] https://github.com/OCamlPro/ocplib-endian/archive/1.0.tar.gz downloaded
+[cstruct: http] Command started
+[cstruct.2.3.0] https://github.com/mirage/ocaml-cstruct/archive/v2.3.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[ocplib-endian: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--disable-debug" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/ocplib-endian.1.0)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ ocplib-endian
+- Package version: ..................................... 1.0
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ false
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bytes: ........................................... /home/opam/.opam/4.03.0/lib/bytes
+- pkg_bigarray: ........................................ /home/opam/.opam/4.03.0/lib/ocaml
+- ocamldoc: ............................................ /home/opam/.opam/4.03.0/bin/ocamldoc
+- 
+[ocplib-endian: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/ocplib-endian.1.0)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- W: Cannot find source file matching module 'EndianBigstring' in library bigstring
+- W: Cannot find source file matching module 'EndianBigstring' in library bigstring
+- W: Cannot find source file matching module 'EndianString' in library ocplib_endian
+- W: Cannot find source file matching module 'EndianBytes' in library ocplib_endian
+- W: Cannot find source file matching module 'EndianString' in library ocplib_endian
+- W: Cannot find source file matching module 'EndianBytes' in library ocplib_endian
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianString.mli src/endianString.cppo.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianString.mli > src/endianString.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianString.cmi src/endianString.mli
+- cppo -V OCAML:4.03.0 -I src/ -o src/common_401.ml src/common_401.cppo.ml
+- cppo -V OCAML:4.03.0 -I src/ -o src/common_400.ml src/common_400.cppo.ml
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianString.ml src/endianString.cppo.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianString.ml > src/endianString.ml.depends
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianBytes.mli src/endianBytes.cppo.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianBytes.mli > src/endianBytes.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianBytes.cmi src/endianBytes.mli
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianBytes.ml src/endianBytes.cppo.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianBytes.ml > src/endianBytes.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianString.cmo src/endianString.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianBytes.cmo src/endianBytes.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a src/endianString.cmo src/endianBytes.cmo -o src/ocplib_endian.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -annot -bin-annot -safe-string -package bigarray -package bytes -inline 1000 -I src -o src/endianString.cmx src/endianString.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -annot -bin-annot -safe-string -package bigarray -package bytes -inline 1000 -I src -o src/endianBytes.cmx src/endianBytes.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a src/endianString.cmx src/endianBytes.cmx -o src/ocplib_endian.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared src/ocplib_endian.cmxa src/endianString.cmx src/endianBytes.cmx -o src/ocplib_endian.cmxs
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianBigstring.mli src/endianBigstring.cppo.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianBigstring.mli > src/endianBigstring.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianBigstring.cmi src/endianBigstring.mli
+- cppo -V OCAML:4.03.0 -I src/ -o src/endianBigstring.ml src/endianBigstring.cppo.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -modules src/endianBigstring.ml > src/endianBigstring.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -annot -bin-annot -safe-string -package bigarray -package bytes -I src -o src/endianBigstring.cmo src/endianBigstring.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a src/endianBigstring.cmo -o src/bigstring.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -annot -bin-annot -safe-string -package bigarray -package bytes -inline 1000 -I src -o src/endianBigstring.cmx src/endianBigstring.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a src/endianBigstring.cmx -o src/bigstring.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared src/bigstring.cmxa src/endianBigstring.cmx -o src/bigstring.cmxs
+[ocplib-endian: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/ocplib-endian.1.0)
+- W: Cannot find source header for module EndianString in library ocplib_endian
+- W: Cannot find source header for module EndianBytes in library ocplib_endian
+- W: Cannot find source header for module EndianBigstring in library bigstring
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.mli
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.mli
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/ocplib_endian.cma
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/ocplib_endian.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/ocplib_endian.a
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/ocplib_endian.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.cmi
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.cmti
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.cmt
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.annot
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.cmi
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.cmti
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.cmt
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.annot
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBytes.cmx
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianString.cmx
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.mli
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/bigstring.cma
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/bigstring.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/bigstring.a
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/bigstring.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.cmi
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.cmti
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.cmt
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.annot
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/endianBigstring.cmx
+- Installed /home/opam/.opam/4.03.0/lib/ocplib-endian/META
+-> installed ocplib-endian.1.0
+[cstruct: ./configure] Command started
++ ./configure "--prefix" "/home/opam/.opam/4.03.0" "--disable-lwt" "--enable-ppx" "--disable-async" "--enable-unix" (CWD=/home/opam/.opam/4.03.0/build/cstruct.2.3.0)
+- Generating ppx/ppx_cstruct.ml from ppx/ppx_cstruct.403.ml
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ cstruct
+- Package version: ..................................... 2.3.0
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- build the Lwt library: ............................... false
+- build the Async_unix library: ........................ false
+- build the UNIX library: .............................. true
+- build the ppx syntax extension: ...................... true
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bytes: ........................................... /home/opam/.opam/4.03.0/lib/bytes
+- pkg_bigarray: ........................................ /home/opam/.opam/4.03.0/lib/ocaml
+- pkg_ocplib_endian: ................................... /home/opam/.opam/4.03.0/lib/ocplib-endian
+- pkg_ocplib_endian_bigstring: ......................... /home/opam/.opam/4.03.0/lib/ocplib-endian
+- pkg_sexplib: ......................................... /home/opam/.opam/4.03.0/lib/sexplib
+- pkg_unix: ............................................ /home/opam/.opam/4.03.0/lib/ocaml
+- pkg_ppx_tools_metaquot: .............................. /home/opam/.opam/4.03.0/lib/ppx_tools
+- ocamldoc: ............................................ /home/opam/.opam/4.03.0/bin/ocamldoc
+- 
+[cstruct: make] Command started
++ make  (CWD=/home/opam/.opam/4.03.0/build/cstruct.2.3.0)
+- ocaml setup.ml -build 
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "_tags", line 34, characters 20-29:
+- Warning: the tag "pkg_async" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 46, characters 18-30:
+- Warning: the tag "pkg_lwt.unix" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 69, characters 33-42:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 82, characters 32-41:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 94, characters 31-40:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 106, characters 31-40:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 116, characters 23-32:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 128, characters 32-41:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 135, characters 23-32:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -ccopt -O3 -ccopt -Wall -c lib/cstruct_stubs.c
+- mv cstruct_stubs.o lib/cstruct_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlmklib -o lib/cstruct_stubs lib/cstruct_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -modules lib/cstruct.mli > lib/cstruct.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -ccopt -O3 -ccopt -Wall -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -I lib -o lib/cstruct.cmi lib/cstruct.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -modules lib/cstruct.ml > lib/cstruct.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -ccopt -O3 -ccopt -Wall -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -I lib -o lib/cstruct.cmo lib/cstruct.ml
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -ccopt -O3 -ccopt -Wall -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -I lib -o lib/cstruct.cmo lib/cstruct.ml
+- File "lib/cstruct.ml", line 154, characters 0-138:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 156, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 158, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 160, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 162, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 164, characters 0-117:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 166, characters 0-102:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a -dllib -lcstruct_stubs -cclib -lcstruct_stubs lib/cstruct.cmo -o lib/cstruct.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -principal -ccopt -O3 -ccopt -Wall -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -I lib -o lib/cstruct.cmx lib/cstruct.ml
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -principal -ccopt -O3 -ccopt -Wall -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -I lib -o lib/cstruct.cmx lib/cstruct.ml
+- File "lib/cstruct.ml", line 154, characters 0-138:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 156, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 158, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 160, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 162, characters 0-132:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 164, characters 0-117:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- File "lib/cstruct.ml", line 166, characters 0-102:
+- Warning 3: deprecated: [@@noalloc] should be used instead of "noalloc"
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a -cclib -lcstruct_stubs lib/cstruct.cmx -o lib/cstruct.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared -I lib/ lib/cstruct.cmxa lib/cstruct.cmx -o lib/cstruct.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -package unix -modules unix/unix_cstruct.mli > unix/unix_cstruct.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -I lib -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -package unix -I unix -I lib -o unix/unix_cstruct.cmi unix/unix_cstruct.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -package unix -modules unix/unix_cstruct.ml > unix/unix_cstruct.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -I lib -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -package unix -I unix -I lib -o unix/unix_cstruct.cmo unix/unix_cstruct.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a unix/unix_cstruct.cmo -o unix/unix_cstruct.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -principal -I lib -package bigarray -package bytes -package ocplib-endian -package ocplib-endian.bigstring -package sexplib -package unix -I unix -I lib -o unix/unix_cstruct.cmx unix/unix_cstruct.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a unix/unix_cstruct.cmx -o unix/unix_cstruct.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared unix/unix_cstruct.cmxa unix/unix_cstruct.cmx -o unix/unix_cstruct.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -package ppx_tools.metaquot -modules ppx/ppx_cstruct.ml > ppx/ppx_cstruct.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -package bigarray -package ppx_tools.metaquot -I ppx -o ppx/ppx_cstruct.cmo ppx/ppx_cstruct.ml
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -principal -package bigarray -package ppx_tools.metaquot -I ppx -o ppx/ppx_cstruct.cmo ppx/ppx_cstruct.ml
+- findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/opam/.opam/4.03.0/lib/ocaml/compiler-libs, /home/opam/.opam/4.03.0/lib/ocaml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -principal -package bigarray -package ppx_tools.metaquot -I ppx -o ppx/ppx_cstruct.cmx ppx/ppx_cstruct.ml
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -principal -package bigarray -package ppx_tools.metaquot -I ppx -o ppx/ppx_cstruct.cmx ppx/ppx_cstruct.ml
+- findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/opam/.opam/4.03.0/lib/ocaml/compiler-libs, /home/opam/.opam/4.03.0/lib/ocaml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -g -linkpkg -package bigarray -package ppx_tools.metaquot ppx/ppx_cstruct.cmx -o ppx/ppx_cstruct.native
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -g -linkpkg -package bigarray -package ppx_tools.metaquot ppx/ppx_cstruct.cmx -o ppx/ppx_cstruct.native
+- findlib: [WARNING] Interface topdirs.cmi occurs in several directories: /home/opam/.opam/4.03.0/lib/ocaml/compiler-libs, /home/opam/.opam/4.03.0/lib/ocaml
+[cstruct: make install] Command started
++ make "install" (CWD=/home/opam/.opam/4.03.0/build/cstruct.2.3.0)
+- ocaml setup.ml -install 
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.mli
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/libcstruct_stubs.a
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cma
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.a
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmi
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmti
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmt
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.annot
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/cstruct.cmx
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.mli
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cma
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.a
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmi
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmti
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmt
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.annot
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/unix_cstruct.cmx
+- Installed /home/opam/.opam/4.03.0/lib/cstruct/META
+- Installed /home/opam/.opam/4.03.0/lib/stublibs/dllcstruct_stubs.so
+- Installed /home/opam/.opam/4.03.0/lib/stublibs/dllcstruct_stubs.so.owner
+- ocamlfind: [WARNING] You have installed DLLs but the directory /home/opam/.opam/4.03.0/lib/stublibs is not mentioned in ld.conf
+[cstruct: make js-install] Command started
++ make "js-install" (CWD=/home/opam/.opam/4.03.0/build/cstruct.2.3.0)
+- install -m 0644 js/cstruct.js /home/opam/.opam/4.03.0/lib/cstruct
+-> installed cstruct.2.3.0
+[mirage-fs: make all] Command started
++ make "all" (CWD=/home/opam/.opam/4.03.0/build/mirage-fs.0.6.0)
+- cd crunch && ocamlbuild  crunch.native
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamldep.opt -modules crunch.ml > crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c -o crunch.cmo crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt -c -o crunch.cmx crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c custom_unix_stubs.c
+- /home/opam/.opam/4.03.0/bin/ocamlmklib -o crunch custom_unix_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa crunch.cmx libcrunch.a -o crunch.native
+-> installed mirage-fs.0.6.0
+Done.
+ ---> b4454a4ce779
+Removing intermediate container 80d80f08d4a1
+Step 3 : LABEL "com.docker.datakit.builton" "1473268192.89" "com.docker.datakit.digest" "d4664595673b181b1e36aa027a22c786"
+ ---> Running in 858e9a08aecc
+ ---> c1d240f011c8
+Removing intermediate container 858e9a08aecc
+Successfully built c1d240f011c8
+Recorded container with tag mirageci2:d4664595673b181b1e36aa027a22c786 (sha256:c1d240f011c8969b97d244a2ee1d3ba59734f03132b1df18603f6d84372f102c
+)[2016-09-07 17:40.18] Success
