@@ -1,0 +1,10 @@
+=== Building 0d98f1694d20d151b84e715f960304fd
+[2016-09-07 22:37.00] Starting...
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:opensuse-42.1_ocaml-4.03.0
+ ---> 8354a28f31d7
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in df1406d9560b
+Removing intermediate container df1406d9560b
+error creating zfs mount of zpool-docker/docker/3be15950fa18f72fba9796901ea8671d6618bc91f44084f1e865c1f83f613b89 to /var/lib/docker/zfs/graph/3be15950fa18f72fba9796901ea8671d6618bc91f44084f1e865c1f83f613b89: device or resource busy
+[2016-09-07 22:42.03] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=0d98f1694d20d151b84e715f960304fd --label com.docker.datakit.builton=1473287820.3 -t mirageci2:0d98f1694d20d151b84e715f960304fd --no-cache --rm --force-rm - < /tmp/tmp-2dfbe0f3/Dockerfile" exited with status 1
