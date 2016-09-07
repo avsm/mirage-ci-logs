@@ -1,0 +1,47 @@
+=== Building f4cdb70aa396bb4f67ff1b4fa1aec953
+[2016-09-07 22:37.15] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:42f847c2f9777081a2311681110ee13d8b371c06dfacd2aa0f9210c8ed714fad
+ ---> 42f847c2f977
+Step 2 : RUN opam depext -uiyv -j 2 mirage-fs
+ ---> Running in 25827403cd2a
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# All required OS packages found.
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install mirage-fs 0.6.0
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: http] Command started
+[mirage-fs: http] Command started
+[mirage-fs.0.6.0] https://github.com/mirage/mirage-fs/archive/v0.6.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: make all] Command started
++ make "all" (CWD=/home/opam/.opam/4.03.0/build/mirage-fs.0.6.0)
+- cd crunch && ocamlbuild  crunch.native
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamldep.opt -modules crunch.ml > crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c -o crunch.cmo crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt -c -o crunch.cmx crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c custom_unix_stubs.c
+- /home/opam/.opam/4.03.0/bin/ocamlmklib -o crunch custom_unix_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa crunch.cmx libcrunch.a -o crunch.native
+-> installed mirage-fs.0.6.0
+Done.
+ ---> c79585fcfd98
+Removing intermediate container 25827403cd2a
+Step 3 : LABEL "com.docker.datakit.builton" "1473287835.26" "com.docker.datakit.digest" "f4cdb70aa396bb4f67ff1b4fa1aec953"
+ ---> Running in 516fa655a0db
+ ---> fab003d5aa39
+Removing intermediate container 516fa655a0db
+Successfully built fab003d5aa39
+Recorded container with tag mirageci2:f4cdb70aa396bb4f67ff1b4fa1aec953 (sha256:fab003d5aa394eb2e3da97b73b611e99a94f00d1555a084624e591899219681f
+)[2016-09-07 23:37.40] Success
