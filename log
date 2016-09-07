@@ -1,0 +1,19 @@
+=== Building 9d8d1085152618508317f874eba101c8
+[2016-09-07 22:37.28] Starting...
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:opensuse-42.1_ocaml-4.03.0
+ ---> 8354a28f31d7
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in 9183d0b753a3
+ ---> d9ef2bf40506
+Removing intermediate container 9183d0b753a3
+Step 3 : RUN git pull origin master &&   git checkout 1e3b3ca0d47f9bebe4e8f4b24703ca438336163a &&   opam remote add extra1 https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src
+ ---> Running in 1b6ea259df22
+[91mFrom git://github.com/ocaml/opam-repository
+ * branch            master     -> FETCH_HEAD
+[0m[91m   1e137a3..1e3b3ca  master     -> origin/master
+[0m[91mChecking out files:   3% (9/275)   [0m[91mChecking out files:   3% (10/275)   [0m[91mChecking out files:   4% (11/275)   [0m[91mChecking out files:   4% (12/275)   [0m[91mChecking out files:   4% (13/275)   [0m[91mChecking out files:   5% (14/275)   [0m[91mChecking out files:   5% (15/275)   [0m[91mChecking out files:   5% (16/275)   [0m[91mChecking out files:   6% (17/275)   [0m[91mChecking out files:   6% (18/275)   [0m[91mChecking out files:   6% (19/275)   [0m[91mChecking out files:   7% (20/275)   [0m[91mChecking out files:   7% (21/275)   [0m[91mChecking out files:   8% (22/275)   [0m[91mChecking out files:   8% (23/275)   [0m[91mChecking out files:   8% (24/275)   [0m[91mChecking out files:   9% (25/275)   [0m[91mChecking out files:   9% (26/275)   [0m[91mChecking out files:   9% (27/275)   [0m[91mChecking out files:  10% (28/275)   [0m[91mChecking out files:  10% (30/275)   [0m[91mChecking out files:  11% (31/275)   [0m[91mChecking out files:  11% (32/275)   [0m[91mChecking out files:  12% (33/275)   [0m[91mChecking out files:  12% (34/275)   [0m[91mChecking out files:  12% (35/275)   [0m[91mChecking out files:  13% (36/275)   [0m[91mChecking out files:  13% (37/275)   [0m[91mChecking out files:  13% (38/275)   [0m[91mChecking out files:  14% (39/275)   [0m[91mChecking out files:  14% (40/275)   [0m[91mfatal: cannot create directory at 'packages/ctypes/ctypes.0.8.1': No space left on device
+[0mUpdating 1e137a3..1e3b3ca
+Removing intermediate container 1b6ea259df22
+The command '/bin/sh -c git pull origin master &&   git checkout 1e3b3ca0d47f9bebe4e8f4b24703ca438336163a &&   opam remote add extra1 https://github.com/mirage/mirage-dev.git#092f8251995b22408c1b8e98871553834e86cb99 &&   opam update &&   git clone git://github.com/mirage/mirage /home/opam/src' returned a non-zero code: 128
+[2016-09-07 23:34.11] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=9d8d1085152618508317f874eba101c8 --label com.docker.datakit.builton=1473287848.63 -t mirageci2:9d8d1085152618508317f874eba101c8 --no-cache --rm --force-rm - < /tmp/tmp-1ce155e3/Dockerfile" exited with status 128
