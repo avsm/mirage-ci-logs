@@ -1,0 +1,15 @@
+=== Dockerfile for mirageci2:tags/v2.7.0 (alpine-3.4/4.04.0/opam-repo:71101141df2dc0410d44609e8149218ad1092b72)
+[2016-09-07 15:10.56] Starting...
+[2016-09-07 15:10.56] Building Dockerfile for installing mirage (alpine-3.4 4.04.0)
+FROM ocaml/opam:alpine-3.4_ocaml-4.04.0
+WORKDIR /home/opam/opam-repository
+RUN git pull origin master
+RUN git checkout 71101141df2dc0410d44609e8149218ad1092b72
+RUN opam update
+RUN git clone git://github.com/mirage/mirage /home/opam/src
+WORKDIR /home/opam/src
+RUN git fetch origin tags/v2.7.0:cibranch
+RUN git checkout e7ea7e2d0d410f6d20ecc7d099bebfaefe03d644
+RUN opam pin add -n mirage /home/opam/src
+RUN opam depext -uy mirage
+RUN opam install -j 2 -vy mirage[2016-09-07 15:10.56] Success
