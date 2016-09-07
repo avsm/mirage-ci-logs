@@ -1,0 +1,13 @@
+=== Building 36d218257680b6411f4c253e47d9826a
+[2016-09-07 18:26.19] Starting...
+[2016-09-07 18:26.19] Waiting for free pool slot to build 36d218257680b6411f4c253e47d9826a
+[2016-09-07 18:26.19] Pool slot obtained, starting build of 36d218257680b6411f4c253e47d9826a
+[2016-09-07 18:26.19] Building container for 36d218257680b6411f4c253e47d9826a
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+ ---> Running in e547f251fd45
+Removing intermediate container e547f251fd45
+error creating zfs mount of zpool-docker/docker/8f37fc4549a8d973141a1bab2e2649b96fb69ac7d920d100cf78dd83c98641a6 to /var/lib/docker/zfs/graph/8f37fc4549a8d973141a1bab2e2649b96fb69ac7d920d100cf78dd83c98641a6: device or resource busy
+[2016-09-07 18:30.54] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=36d218257680b6411f4c253e47d9826a --label com.docker.datakit.builton=1473272779.05 -t mirageci2:36d218257680b6411f4c253e47d9826a --no-cache --rm --force-rm - < /tmp/tmp-2a7fb24f/Dockerfile" exited with status 1
