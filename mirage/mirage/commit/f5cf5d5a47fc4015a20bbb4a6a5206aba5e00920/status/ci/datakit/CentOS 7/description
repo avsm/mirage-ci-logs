@@ -1,1 +1,1 @@
-Wait CentOS 7
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=afe3c02bf107af93c035dcf9ad6433e6 --label com.docker.datakit.builton=1473263459.35 -t mirageci2:afe3c02bf107af93c035dcf9ad6433e6 --no-cache --rm --force-rm - < /tmp/tmp-1aa934eb/Dockerfile" exited with status 1
