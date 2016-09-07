@@ -1,0 +1,12 @@
+=== Building 4dec8be873f5e39a61916042c552e669
+[2016-09-07 22:37.28] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:4a083c6a3faff209bd1a41e1225cd6f401ee1f4e8af4ea130b4f353add0bf04e
+ ---> 4a083c6a3faf
+Step 2 : RUN opam depext -uiyv -j 2 mirage-seal
+ ---> Running in 18cc4d8dbcf2
+[91mFatal error:
+Sys_error("/home/opam/.opam/log/command-7-5a61c5.env: No space left on device")
+[0mRemoving intermediate container 18cc4d8dbcf2
+The command '/bin/sh -c opam depext -uiyv -j 2 mirage-seal' returned a non-zero code: 1
+[2016-09-07 23:34.38] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=4dec8be873f5e39a61916042c552e669 --label com.docker.datakit.builton=1473287848.86 -t mirageci2:4dec8be873f5e39a61916042c552e669 --no-cache --rm --force-rm - < /tmp/tmp-34502944/Dockerfile" exited with status 1
