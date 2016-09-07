@@ -1,0 +1,9 @@
+=== Building b50539b2a3e3549fb99e7c519ecc1851
+[2016-09-07 10:26.23] Starting...
+[2016-09-07 10:26.23] Waiting for free pool slot to build b50539b2a3e3549fb99e7c519ecc1851
+[2016-09-07 10:26.23] Pool slot obtained, starting build of b50539b2a3e3549fb99e7c519ecc1851
+[2016-09-07 10:26.23] Building container for b50539b2a3e3549fb99e7c519ecc1851
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.04.0+trunk
+Error parsing reference: "ocaml/opam:alpine-3.4_ocaml-4.04.0+trunk" is not a valid repository/tag
+[2016-09-07 10:26.24] Failed: Command "sh" "-c" "docker build --label com.docker.datakit.digest=b50539b2a3e3549fb99e7c519ecc1851 --label com.docker.datakit.builton=1473243983.94 -t mirageci2:b50539b2a3e3549fb99e7c519ecc1851 --no-cache --rm --force-rm - < /tmp/tmp-a89665/Dockerfile" exited with status 1
