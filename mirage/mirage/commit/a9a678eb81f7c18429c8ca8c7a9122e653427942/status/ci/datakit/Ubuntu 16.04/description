@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=381dfaa8a22bee96e2a557cb2f1ebad9 --label com.docker.datakit.builton=1473277892.63 -t mirageci2:381dfaa8a22bee96e2a557cb2f1ebad9 --no-cache --rm --force-rm - < /tmp/tmp-291794fa/Dockerfile" exited with status 1
+Wait Ubuntu 16.04
