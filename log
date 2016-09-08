@@ -1,0 +1,12 @@
+=== docker run sha256:90c4497a40b6aeb50503477562064b6082ee04042edfc988d5c1f42143331d9b opam list -s --depends-on mirage
+[2016-09-08 10:23.34] Starting...
+[2016-09-08 10:23.34] Waiting for free pool slot to run
+[2016-09-08 10:23.34] Pool slot obtained, starting run
+[2016-09-08 10:23.34] docker run sha256:90c4497a40b6aeb50503477562064b6082ee04042edfc988d5c1f42143331d9b opam list -s --depends-on mirage
+imaplet-lwt
+mirage-fs
+mirage-seal
+mirage-www
+nbd
+tftp
+[2016-09-08 10:23.39] Success
