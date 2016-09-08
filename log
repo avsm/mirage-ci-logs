@@ -1,0 +1,10 @@
+=== Building b4ea79d471a9a35f8348283be61e80d5
+[2016-09-08 10:28.45] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:abc1eba3d8315cdbaa57c7db9c6566efcf9d84aa25f8724abd7ff7662dfb264c
+ ---> abc1eba3d831
+Step 2 : RUN opam depext -uiyv -j 2 mirage-www
+ ---> Running in a942a05342da
+Removing intermediate container a942a05342da
+failed to write unhaltered resolv.conf file content when setting up dns for sandbox 0c1dfa87790fd3c121a614e7f874e76f29c46a46bc186d89a19fc8aa2b8498f3: write /var/lib/docker/containers/a942a05342dad14501ee8a7810337a6470be5988aa609b5e3da174b196d68076/resolv.conf: no space left on device
+[2016-09-08 10:38.15] Failed: Build exit 1
