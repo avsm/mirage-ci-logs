@@ -1,0 +1,10 @@
+=== docker run sha256:9ee97be2284eaf0790f02fec23a32a722855f92167a2ab992c259b4c0841c472
+ opam list -s --depends-on mirage
+[2016-09-08 10:19.44] Starting...
+[2016-09-08 10:19.44] Waiting for free pool slot to run
+[2016-09-08 10:19.44] Pool slot obtained, starting run
+[2016-09-08 10:19.44] docker run sha256:9ee97be2284eaf0790f02fec23a32a722855f92167a2ab992c259b4c0841c472
+ opam list -s --depends-on mirage
+docker: Error parsing reference: "sha256:9ee97be2284eaf0790f02fec23a32a722855f92167a2ab992c259b4c0841c472\n" is not a valid repository/tag.
+See 'docker run --help'.
+[2016-09-08 10:19.44] Failed: Command "docker" "run" "sha256:9ee97be2284eaf0790f02fec23a32a722855f92167a2ab992c259b4c0841c472\n" "opam" "list" "-s" "--depends-on" "mirage" exited with status 125
