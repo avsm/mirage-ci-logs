@@ -1,0 +1,37 @@
+=== Building 141b91aca1416401a6d29584261bd0c9
+[2016-09-08 10:28.50] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:4a083c6a3faff209bd1a41e1225cd6f401ee1f4e8af4ea130b4f353add0bf04e
+ ---> 4a083c6a3faf
+Step 2 : RUN opam depext -uiyv -j 2 nbd
+ ---> Running in 1624b4db9d89
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: linux-headers
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add linux-headers
+(1/1) Installing linux-headers (4.4.6-r1)
+ERROR: Failed to create usr/include/asm/hyperv.h: No space left on device
+ERROR: linux-headers-4.4.6-r1: No space left on device
+1 errors; 435 MiB in 84 packages
+[91mOS package installation failed
+[0mRemoving intermediate container 1624b4db9d89
+The command '/bin/sh -c opam depext -uiyv -j 2 nbd' returned a non-zero code: 1
+[2016-09-08 11:35.48] Failed: Build exit 1
