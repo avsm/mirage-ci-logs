@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=76006249659244d4bf6c93954fd4456f --label com.docker.datakit.builton=1473287707.39 -t mirageci2:76006249659244d4bf6c93954fd4456f --no-cache --rm --force-rm - < /tmp/tmp-1d314fdb/Dockerfile" exited with status 4
+Wait OpenSUSE 42.1
