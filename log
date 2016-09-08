@@ -1,0 +1,188 @@
+=== Building 31df8e300d6ba883bb57db65427d2f18
+[2016-09-08 10:28.49] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:fdf78c2ceb69cbf60a473ea9f13539e3a96fea656f30eb3b73b273fa8e261af5
+ ---> fdf78c2ceb69
+Step 2 : RUN opam depext -uiyv -j 2 imaplet-lwt
+ ---> Running in 4acb500cfad0
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - autoconf
+#  - gmp-dev
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - openssl-dev
+#  - perl
+#  - pkgconfig
+#  - zlib-dev
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+(1/7) Installing perl (5.22.2-r0)
+(2/7) Installing autoconf (2.69-r0)
+(3/7) Installing libgmpxx (6.1.0-r0)
+(4/7) Installing gmp-dev (6.1.0-r0)
+(5/7) Installing linux-headers (4.4.6-r1)
+(6/7) Installing zlib-dev (1.2.8-r2)
+(7/7) Installing openssl-dev (1.0.2h-r1)
+Executing busybox-1.24.2-r11.trigger
+OK: 494 MiB in 91 packages
+# OS packages installation successful
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install conf-perl        1                                  [required by zarith]
+  - install stringext        1.4.2                              [required by cohttp, irmin]
+  - install base64           2.0.0                              [required by cohttp]
+  - install magic-mime       1.0.0                              [required by cohttp]
+  - install menhir           20160825                           [required by imaplet-lwt]
+  - install conf-gmp         1                                  [required by zarith]
+  - install fieldslib        113.24.00                          [required by cohttp]
+  - install ocamlify         0.0.1                              [required by oasis]
+  - install mtime            0.8.3                              [required by git]
+  - install ocamlmod         0.0.8                              [required by oasis]
+  - install bin_prot         113.33.00+4.03                     [required by mirage-tc]
+  - install mirage-no-solo5  1                                  [required by nocrypto]
+  - install uutf             0.9.4                              [required by jsonm]
+  - install mstruct          1.3.2                              [required by git, irmin]
+  - install crunch           1.4.1                              [required by irmin]
+  - install mirage-no-xen    1                                  [required by nocrypto]
+  - install hex              1.0.0                              [required by git, irmin]
+  - install re               1.6.1                              [required by imaplet-lwt]
+  - install ptime            0.8.2                              [required by tls]
+  - install zarith           1.4.1                              [required by nocrypto]
+  - install ppx_fields_conv  113.33.00+4.03                     [required by cohttp]
+  - install oasis            0.4.7                              [required by crc]
+  - install jsonm            0.9.1                              [required by ezjsonm]
+  - install uri              1.9.2                              [required by git, cohttp, irmin]
+  - install asn1-combinators 0.1.2                              [required by x509]
+  - install nocrypto         dev~mirage                         [required by git]
+  - install crc              1.0.0                              [required by git]
+  - install ezjsonm          0.4.3                              [required by irmin]
+  - install x509             0.5.2                              [required by tls]
+  - install mirage-tc        0.3.0                              [required by irmin]
+  - install tls              dev~mirage                         [required by imaplet-lwt]
+  - install conduit          0.12.0                             [required by cohttp, git]
+  - install cohttp           0.21.0                             [required by imaplet-lwt]
+  - install git              1.8.0                              [required by imaplet-lwt]
+  - install irmin            0.11.1                             [required by imaplet-lwt]
+  - install imaplet-lwt      0.1.10        
+===== 36 to install =====
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[asn1-combinators: http] Command started
+[base64: http] Command started
+[bin_prot: http] Command started
+[asn1-combinators: http] Command started
+[asn1-combinators.0.1.2] https://github.com/mirleft/ocaml-asn1-combinators/archive/0.1.2.tar.gz downloaded
+[cohttp: http] Command started
+[bin_prot: http] Command started
+[bin_prot.113.33.00+4.03] https://ocaml.janestreet.com/ocaml-core/113.33/files/bin_prot-113.33.00+4.03.tar.gz downloaded
+[conduit: http] Command started
+[cohttp: http] Command started
+[cohttp.0.21.0] https://github.com/mirage/ocaml-cohttp/archive/v0.21.0.tar.gz downloaded
+[crc: http] Command started
+[conduit: http] Command started
+[base64: http] Command started
+[conduit.0.12.0] https://github.com/mirage/ocaml-conduit/archive/v0.12.0.tar.gz downloaded
+[crunch: http] Command started
+[base64.2.0.0] https://github.com/mirage/ocaml-base64/archive/v2.0.0.tar.gz downloaded
+[ezjsonm: http] Command started
+[crc: http] Command started
+[crc.1.0.0] https://github.com/xapi-project/ocaml-crc/archive/1.0.0.tar.gz downloaded
+[fieldslib: http] Command started
+[crunch: http] Command started
+[ezjsonm: http] Command started
+[crunch.1.4.1] https://github.com/mirage/ocaml-crunch/archive/v1.4.1.tar.gz downloaded
+[git: http] Command started
+[ezjsonm.0.4.3] https://github.com/mirage/ezjsonm/archive/0.4.3.tar.gz downloaded
+[hex: http] Command started
+[git: http] Command started
+[fieldslib: http] Command started
+[git.1.8.0] https://github.com/mirage/ocaml-git/archive/1.8.0.tar.gz downloaded
+[imaplet-lwt: http] Command started
+[hex: http] Command started
+[fieldslib.113.24.00] https://ocaml.janestreet.com/ocaml-core/113.24/files/fieldslib-113.24.00.tar.gz downloaded
+[irmin: http] Command started
+[hex.1.0.0] https://github.com/mirage/ocaml-hex/archive/1.0.0.tar.gz downloaded
+[jsonm: http] Command started
+[jsonm: http] Command started
+[jsonm.0.9.1] http://erratique.ch/software/jsonm/releases/jsonm-0.9.1.tbz downloaded
+[magic-mime: http] Command started
+[magic-mime: http] Command started
+[magic-mime.1.0.0] https://github.com/mirage/ocaml-magic-mime/archive/v1.0.0.tar.gz downloaded
+[menhir: http] Command started
+[imaplet-lwt: http] Command started
+[imaplet-lwt.0.1.10] https://github.com/gregtatcam/imaplet-lwt/archive/v0.1.10.tar.gz downloaded
+[mirage-tc: http] Command started
+[mirage-tc: http] Command started
+[menhir: http] Command started
+[mirage-tc.0.3.0] https://github.com/mirage/mirage-tc/archive/0.3.0.tar.gz downloaded
+[mstruct: http] Command started
+[menhir.20160825] http://gallium.inria.fr/~fpottier/menhir/menhir-20160825.tar.gz downloaded
+[mtime: http] Command started
+[mtime: http] Command started
+[mtime.0.8.3] http://erratique.ch/software/mtime/releases/mtime-0.8.3.tbz downloaded
+[nocrypto: git] Command started
+[irmin: http] Command started
+[irmin.0.11.1] https://github.com/mirage/irmin/archive/0.11.1.tar.gz downloaded
+[oasis: http] Command started
+[mstruct: http] Command started
+[mstruct.1.3.2] https://github.com/mirage/ocaml-mstruct/archive/1.3.2.tar.gz downloaded
+[ocamlify: http] Command started
+[nocrypto: git] Command started
+[oasis: http] Command started
+[ocamlify: http] Command started
+[oasis.0.4.7] https://forge.ocamlcore.org/frs/download.php/1635/oasis-0.4.7.tar.gz downloaded
+[ocamlmod: http] Command started
+[nocrypto: git] Command started
+[ocamlify.0.0.1] http://forge.ocamlcore.org/frs/download.php/379/ocamlify-0.0.1.tar.gz downloaded
+[ppx_fields_conv: http] Command started
+[ocamlmod: http] Command started
+[ppx_fields_conv: http] Command started
+[ocamlmod.0.0.8] https://forge.ocamlcore.org/frs/download.php/1544/ocamlmod-0.0.8.tar.gz downloaded
+[ptime: http] Command started
+[ppx_fields_conv.113.33.00+4.03] https://ocaml.janestreet.com/ocaml-core/113.33/files/ppx_fields_conv-113.33.00+4.03.tar.gz downloaded
+[re: http] Command started
+[nocrypto: git] Command started
+[ptime: http] Command started
+[re: http] Command started
+[nocrypto: git] Command started
+[ptime.0.8.2] http://erratique.ch/software/ptime/releases/ptime-0.8.2.tbz downloaded
+[stringext: http] Command started
+[re.1.6.1] https://github.com/ocaml/ocaml-re/archive/1.6.1.tar.gz downloaded
+[tls: git] Command started
+[stringext: http] Command started
+[stringext.1.4.2] https://github.com/rgrinberg/stringext/archive/v1.4.2.tar.gz downloaded
+[uri: http] Command started
+[nocrypto: git] Command started
+[uri: http] Command started
+[uri.1.9.2] https://github.com/mirage/ocaml-uri/archive/v1.9.2.tar.gz downloaded
+[uutf: http] Command started
+[uutf: http] Command started
+[uutf.0.9.4] http://erratique.ch/software/uutf/releases/uutf-0.9.4.tbz downloaded
+[x509: http] Command started
+[x509: http] Command started
+[x509.0.5.2] https://github.com/mirleft/ocaml-x509/archive/0.5.2.tar.gz downloaded
+[zarith: http] Command started
+[91m'opam install --verbose --yes --jobs=2 imaplet-lwt' failed.
+Fatal error:
+# opam-version    1.2.2
+# os              linux
+opam: "open" failed on /home/opam/.opam/log/log-7-b36dbe.err: No space left on device
+[0mRemoving intermediate container 4acb500cfad0
+The command '/bin/sh -c opam depext -uiyv -j 2 imaplet-lwt' returned a non-zero code: 1
+[2016-09-08 11:32.40] Failed: Build exit 1
