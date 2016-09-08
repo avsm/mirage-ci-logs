@@ -1,0 +1,9 @@
+=== Building 580826f253bb5eb8eefa9020362ae198
+[2016-09-08 10:28.46] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:300d8fc15b15ec67ac33abc5e60dd9b1d3c8d7a8a2906a9aba1cb6453151d996
+ ---> 300d8fc15b15
+Step 2 : RUN opam depext -uiyv -j 2 tftp
+exit status 1: "/sbin/zfs zfs snapshot zpool-docker/docker/b47acac12c726d043d319d3fe149b86ce388e5196c2ed2873fdf1ef0fda03fe5@52117973" => cannot create snapshots : out of space
+
+[2016-09-08 10:36.41] Failed: Build exit 1
