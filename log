@@ -1,0 +1,9 @@
+=== Building 5b94edd9bb7e4e4bc66caadcc31bc369
+[2016-09-08 10:28.50] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:4a083c6a3faff209bd1a41e1225cd6f401ee1f4e8af4ea130b4f353add0bf04e
+ ---> 4a083c6a3faf
+Step 2 : RUN opam depext -uiyv -j 2 mirage-www
+exit status 1: "/sbin/zfs zfs snapshot zpool-docker/docker/e60960609f7ceb90eac9346886e38bc07bb3488bf50bde0f31c0737354d4aaf7-init@446665924" => cannot create snapshots : out of space
+
+[2016-09-08 11:31.02] Failed: Build exit 1
