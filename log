@@ -1,0 +1,48 @@
+=== Building f563f65ea7c032c8840f321d8c4add50
+[2016-09-08 10:28.48] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:97ae385febdcfbe61ed3d886fdb2e7424c6d227a788856e9abde7e0b99eb9ce3
+ ---> 97ae385febdc
+Step 2 : RUN opam depext -uiyv -j 2 imaplet-lwt
+ ---> Running in 248b1f2f8f67
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - autoconf
+#  - gmp-dev
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - openssl-dev
+#  - perl
+#  - pkgconfig
+#  - zlib-dev
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+(1/7) Installing perl (5.22.2-r0)
+ERROR: Failed to create usr/share/perl5/core_perl/ExtUtils/Liblist/Kid.pm: No such file or directory
+(2/7) Installing autoconf (2.69-r0)
+(3/7) Installing libgmpxx (6.1.0-r0)
+(4/7) Installing gmp-dev (6.1.0-r0)
+(5/7) Installing linux-headers (4.4.6-r1)
+(6/7) Installing zlib-dev (1.2.8-r2)
+(7/7) Installing openssl-dev (1.0.2h-r1)
+Executing busybox-1.24.2-r11.trigger
+1 errors; 494 MiB in 91 packages
+[91mOS package installation failed
+[0mRemoving intermediate container 248b1f2f8f67
+The command '/bin/sh -c opam depext -uiyv -j 2 imaplet-lwt' returned a non-zero code: 1
+[2016-09-08 11:13.20] Failed: Build exit 1
