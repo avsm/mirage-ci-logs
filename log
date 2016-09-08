@@ -1,0 +1,98 @@
+=== Building fe9e98ec04039fb03186247dc4b0a138
+[2016-09-08 10:28.50] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:42f847c2f9777081a2311681110ee13d8b371c06dfacd2aa0f9210c8ed714fad
+ ---> 42f847c2f977
+Step 2 : RUN opam depext -uiyv -j 2 mirage-www
+ ---> Running in 29f7b00b7b6a
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - autoconf
+#  - gmp-dev
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - openssl-dev
+#  - perl
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: autoconf gmp-dev linux-headers openssl-dev perl
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add autoconf gmp-dev linux-headers openssl-dev perl
+(1/7) Installing perl (5.22.2-r0)
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Shell.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Version.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Module.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/CacheMgr.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Author.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Queue.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Kwalify/distroprefs.yml: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Kwalify/distroprefs.dd: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History/Meta_1_0.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History/Meta_1_1.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History/Meta_1_3.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History/Meta_1_4.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History/Meta_1_2.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Merge.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Validator.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Spec.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Converter.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Requirements.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/History.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/YAML.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Feature.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta/Prereqs.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/FTP.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Tarzip.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/LWP/UserAgent.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Distroprefs.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Distrostatus.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Prompt.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/API/HOWTO.pod: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Mirrors.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Nox.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Distribution.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/FirstTime.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/FTP/netrc.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/HTTP/Client.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/HTTP/Credentials.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Index.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Meta.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Plugin.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Exception/yaml_not_installed.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Exception/blocked_urllist.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Exception/yaml_process_error.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Exception/RecursiveDependency.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/DeferredCode.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Bundle.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Complete.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/URL.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Plugin/Specfile.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/InfoObj.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Debug.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/Kwalify.pm: No such file or directory
+ERROR: Failed to create usr/share/perl5/core_perl/CPAN/HandleConfig.pm: No such file or directory
+(2/7) Installing autoconf (2.69-r0)
+(3/7) Installing libgmpxx (6.1.0-r0)
+(4/7) Installing gmp-dev (6.1.0-r0)
+(5/7) Installing linux-headers (4.4.6-r1)
+(6/7) Installing zlib-dev (1.2.8-r2)
+(7/7) Installing openssl-dev (1.0.2h-r1)
+Executing busybox-1.24.2-r11.trigger
+1 errors; 494 MiB in 91 packages
+[91mOS package installation failed
+[0mRemoving intermediate container 29f7b00b7b6a
+The command '/bin/sh -c opam depext -uiyv -j 2 mirage-www' returned a non-zero code: 1
+[2016-09-08 11:42.50] Failed: Build exit 1
