@@ -1,0 +1,812 @@
+=== Building 66f81264caa36bfd08884f8712c7d701
+[2016-09-08 10:28.50] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:cd8f64c1f2321d0892f922150b1243f140733ead1a1c57086876c8833c7cf3fd
+ ---> cd8f64c1f232
+Step 2 : RUN opam depext -uiyv -j 2 nbd
+ ---> Running in 90e8e4b7fd11
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: linux-headers
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add linux-headers
+(1/1) Installing linux-headers (4.4.6-r1)
+OK: 440 MiB in 85 packages
+# OS packages installation successful
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install ocamlmod          0.0.8                             [required by oasis]
+  - install stringext         1.4.2                             [required by uri]
+  - install mirage-block-unix 2.3.0                             [required by nbd]
+  - install type_conv         113.00.02                         [required by nbd]
+  - install re                1.6.1                             [required by uri]
+  - install ocamlify          0.0.1                             [required by oasis]
+  - install uri               1.9.2                             [required by nbd]
+  - install oasis             0.4.7                             [required by nbd]
+  - install nbd               2.1.0    
+===== 9 to install =====
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-block-unix: http] Command started
+[nbd: http] Command started
+[oasis: http] Command started
+[mirage-block-unix: http] Command started
+[mirage-block-unix.2.3.0] https://github.com/mirage/mirage-block-unix/archive/v2.3.0.tar.gz downloaded
+[ocamlify: http] Command started
+[ocamlify: http] Command started
+[ocamlify.0.0.1] http://forge.ocamlcore.org/frs/download.php/379/ocamlify-0.0.1.tar.gz downloaded
+[ocamlmod: http] Command started
+[ocamlmod: http] Command started
+[ocamlmod.0.0.8] https://forge.ocamlcore.org/frs/download.php/1544/ocamlmod-0.0.8.tar.gz downloaded
+[re: http] Command started
+[re: http] Command started
+[re.1.6.1] https://github.com/ocaml/ocaml-re/archive/1.6.1.tar.gz downloaded
+[stringext: http] Command started
+[stringext: http] Command started
+[oasis: http] Command started
+[stringext.1.4.2] https://github.com/rgrinberg/stringext/archive/v1.4.2.tar.gz downloaded
+[type_conv: http] Command started
+[oasis.0.4.7] https://forge.ocamlcore.org/frs/download.php/1635/oasis-0.4.7.tar.gz downloaded
+[uri: http] Command started
+[type_conv: http] Command started
+[type_conv.113.00.02] https://ocaml.janestreet.com/ocaml-core/113.00/files/type_conv-113.00.02.tar.gz downloaded
+[uri: http] Command started
+[uri.1.9.2] https://github.com/mirage/ocaml-uri/archive/v1.9.2.tar.gz downloaded
+[nbd: http] Command started
+[nbd.2.1.0] https://github.com/xapi-project/nbd/archive/v2.1.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-block-unix: ocaml setup.ml] Command started
+[ocamlify: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--disable-tests" (CWD=/home/opam/.opam/4.03.0/build/mirage-block-unix.2.3.0)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ mirage-block-unix
+- Package version: ..................................... 2.3.0
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /usr/local
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_cstruct: ......................................... /home/opam/.opam/4.03.0/lib/cstruct
+- pkg_cstruct_lwt: ..................................... /home/opam/.opam/4.03.0/lib/cstruct
+- pkg_lwt: ............................................. /home/opam/.opam/4.03.0/lib/lwt
+- pkg_lwt_unix: ........................................ /home/opam/.opam/4.03.0/lib/lwt
+- pkg_mirage_types: .................................... /home/opam/.opam/4.03.0/lib/mirage-types
+- pkg_logs: ............................................ /home/opam/.opam/4.03.0/lib/logs
+- 
+[mirage-block-unix: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/ocamlify.0.0.1)
+- 
+- Configuration: 
+- 
+- OCamlbuild additional flags: ................... 
+- Compile with ocaml profile flag on.: ........... false
+- Compile with ocaml debug flag on.: ............. true
+- Remove a directory.: ........................... rm -rf
+- Remove a file.: ................................ rm -f
+- suffix_program: ................................ 
+- is_native: ..................................... true
+- findlib_version: ............................... 1.6.2
+- PS documentation: .............................. $docdir
+- PDF documentation: ............................. $docdir
+- DVI documentation: ............................. $docdir
+- HTML documentation: ............................ $docdir
+- Documentation root: ............................ $datarootdir/doc/$pkg_name
+- Man documentation: ............................. $datarootdir/man
+- Locale-dependent data: ......................... $datarootdir/locale
+- Info documentation: ............................ $datarootdir/info
+- Read-only architecture-independent data: ....... $datarootdir
+- Read-only arch-independent data root: .......... $prefix/share
+- Object code libraries: ......................... $exec_prefix/lib
+- Modifiable single-machine data: ................ $prefix/var
+- Modifiable architecture-independent data: ...... $prefix/com
+- Read-only single-machine data: ................. $prefix/etc
+- Program executables: ........................... $exec_prefix/libexec
+- System admin executables: ...................... $exec_prefix/sbin
+- User executables: .............................. $exec_prefix/bin
+- Install architecture-dependent files in dir: ... $prefix
+- Install architecture-independent files dir: .... /home/opam/.opam/4.03.0
+- systhread_supported: ........................... true
+- default_executable_name: ....................... a.out
+- ext_dll: ....................................... .so
+- ext_lib: ....................................... .a
+- ext_asm: ....................................... .s
+- ext_obj: ....................................... .o
+- model: ......................................... default
+- native_c_compiler: ............................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- bytecomp_c_compiler: ........................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- standard_runtime: .............................. /home/opam/.opam/4.03.0/bin/ocamlrun
+- standard_library: .............................. /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library_default: ...................... /home/opam/.opam/4.03.0/lib/ocaml
+- ocaml_version: ................................. 4.03.0
+- ccomp_type: .................................... cc
+- architecture: .................................. amd64
+- system: ........................................ linux
+- os_type: ....................................... Unix
+- Package version: ............................... 0.0.1
+- Package name: .................................. ocamlify
+- ocamlbuild: .................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- ocamlopt: ...................................... /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlc: ........................................ /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlfind: ..................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- 
+- File "/home/gildor/programmation/oasis/src/oasis/PropList.ml", line 93, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISUtils.ml", line 106, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISExpr.ml", line 99, characters 24-40:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 28, characters 21-40:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 29, characters 21-38:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 146, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 147, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 148, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 149, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- I: Running command '/home/opam/.opam/4.03.0/bin/ocamlc.opt -config > /tmp/oasis-537233.txt'
+- I: Running command '/home/opam/.opam/4.03.0/bin/ocamlfind query -format %v findlib > /tmp/oasis-cb40ce.txt'
+[ocamlify: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/ocamlify.0.0.1)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- ocamlfind ocamldep -modules src/ocamlify.ml > src/ocamlify.ml.depends
+- ocamlfind ocamldep -modules src/OCamlifyConfig.ml > src/OCamlifyConfig.ml.depends
+- ocamlfind ocamlc -c -g -I src -o src/OCamlifyConfig.cmo src/OCamlifyConfig.ml
+- ocamlfind ocamlc -c -g -I src -o src/ocamlify.cmo src/ocamlify.ml
+- ocamlfind ocamlc -g -linkpkg src/OCamlifyConfig.cmo src/ocamlify.cmo -o src/ocamlify.byte
+- File "/home/gildor/programmation/oasis/src/oasis/PropList.ml", line 93, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISUtils.ml", line 106, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISExpr.ml", line 99, characters 24-40:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 28, characters 21-40:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 29, characters 21-38:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 146, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 147, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 148, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 149, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- I: Running command '/home/opam/.opam/4.03.0/bin/ocamlbuild src/ocamlify.byte -tag debug'
+- I: Running command 'cp '_build/src/ocamlify.byte' '_build/src/ocamlify''
+[ocamlify: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/mirage-block-unix.2.3.0)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "_tags", line 64, characters 31-40:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 74, characters 23-32:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -c lib/odirect_stubs.c
+- mv odirect_stubs.o lib/odirect_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -c lib/blkgetsize_stubs.c
+- mv blkgetsize_stubs.o lib/blkgetsize_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -c lib/lseekhole_stubs.c
+- mv lseekhole_stubs.o lib/lseekhole_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -c lib/flush_stubs.c
+- mv flush_stubs.o lib/flush_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlmklib -o lib/mirage_block_unix_stubs lib/odirect_stubs.o lib/blkgetsize_stubs.o lib/lseekhole_stubs.o lib/flush_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package cstruct -package cstruct.lwt -package logs -package lwt -package lwt.unix -package mirage-types -modules lib/block.mli > lib/block.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -package cstruct -package cstruct.lwt -package logs -package lwt -package lwt.unix -package mirage-types -I lib -o lib/block.cmi lib/block.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package cstruct -package cstruct.lwt -package logs -package lwt -package lwt.unix -package mirage-types -modules lib/block.ml > lib/block.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -package cstruct -package cstruct.lwt -package logs -package lwt -package lwt.unix -package mirage-types -I lib -o lib/block.cmo lib/block.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a -dllib -lmirage_block_unix_stubs -cclib -lmirage_block_unix_stubs lib/block.cmo -o lib/mirage_block_unix.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -ccopt -I -ccopt /home/opam/.opam/4.03.0/lib/lwt -package cstruct -package cstruct.lwt -package logs -package lwt -package lwt.unix -package mirage-types -I lib -o lib/block.cmx lib/block.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a -cclib -lmirage_block_unix_stubs lib/block.cmx -o lib/mirage_block_unix.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared -I lib lib/mirage_block_unix.cmxa lib/block.cmx -o lib/mirage_block_unix.cmxs
+[mirage-block-unix: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/ocamlify.0.0.1)
+- File "/home/gildor/programmation/oasis/src/oasis/PropList.ml", line 93, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISUtils.ml", line 106, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISExpr.ml", line 99, characters 24-40:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 28, characters 21-40:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/oasis/OASISLibrary.ml", line 29, characters 21-38:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 146, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 147, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 148, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "/home/gildor/programmation/oasis/src/plugins/internal/InternalInstallPlugin.ml", line 149, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- I: Copying file '/home/opam/.opam/4.03.0/build/ocamlify.0.0.1/_build/src/ocamlify' to '/home/opam/.opam/4.03.0/bin/ocamlify'
+- I: Running command 'cp '/home/opam/.opam/4.03.0/build/ocamlify.0.0.1/_build/src/ocamlify' '/home/opam/.opam/4.03.0/bin/ocamlify''
+-> installed ocamlify.0.0.1
+[ocamlmod: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/mirage-block-unix.2.3.0)
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.mli
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/libmirage_block_unix_stubs.a
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/mirage_block_unix.cma
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/mirage_block_unix.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/mirage_block_unix.a
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/mirage_block_unix.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.cmi
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.cmti
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.cmt
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.annot
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/block.cmx
+- Installed /home/opam/.opam/4.03.0/lib/mirage-block-unix/META
+- Installed /home/opam/.opam/4.03.0/lib/stublibs/dllmirage_block_unix_stubs.so
+- Installed /home/opam/.opam/4.03.0/lib/stublibs/dllmirage_block_unix_stubs.so.owner
+- ocamlfind: [WARNING] You have installed DLLs but the directory /home/opam/.opam/4.03.0/lib/stublibs is not mentioned in ld.conf
+-> installed mirage-block-unix.2.3.0
+[re: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/ocamlmod.0.0.8)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ ocamlmod
+- Package version: ..................................... 0.0.8
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_str: ............................................. /home/opam/.opam/4.03.0/lib/ocaml
+- 
+- File "./setup.ml", line 268, characters 8-26:
+- Warning 3: deprecated: String.set
+- Use Bytes.set instead.
+- File "./setup.ml", line 341, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 341, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 353, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 391, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 497, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1841, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1847, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 2523, characters 6-24:
+- Warning 3: deprecated: Lazy.lazy_from_fun
+- Use Lazy.from_fun instead.
+- File "setup.ml", line 5857, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5858, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5859, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5860, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5925, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5926, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5927, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5928, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+[ocamlmod: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/re.1.6.1)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ re
+- Package version: ..................................... 1.6.1
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bytes: ........................................... /home/opam/.opam/4.03.0/lib/bytes
+- ocamldoc: ............................................ /home/opam/.opam/4.03.0/bin/ocamldoc
+- 
+[re: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/ocamlmod.0.0.8)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "_tags", line 20, characters 18-27:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 22, characters 17-26:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package str -modules src/ocamlmod.ml > src/ocamlmod.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package str -modules src/ocamlmodConf.ml > src/ocamlmodConf.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -package str -I src -o src/ocamlmodConf.cmo src/ocamlmodConf.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -package str -I src -o src/ocamlmod.cmo src/ocamlmod.ml
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -package str -I src -o src/ocamlmod.cmo src/ocamlmod.ml
+- File "src/ocamlmod.ml", line 52, characters 4-21:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "src/ocamlmod.ml", line 29, characters 6-13:
+- Warning 26: unused variable real_fn.
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -linkpkg -package str src/ocamlmodConf.cmo src/ocamlmod.cmo -o src/ocamlmod.byte
+- + /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "myocamlbuild.ml", line 507, characters 43-62:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "myocamlbuild.ml", line 520, characters 51-70:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 268, characters 8-26:
+- Warning 3: deprecated: String.set
+- Use Bytes.set instead.
+- File "./setup.ml", line 341, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 341, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 353, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 391, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 497, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1841, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1847, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 2523, characters 6-24:
+- Warning 3: deprecated: Lazy.lazy_from_fun
+- Use Lazy.from_fun instead.
+- File "setup.ml", line 5857, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5858, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5859, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5860, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5925, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5926, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5927, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5928, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+[ocamlmod: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/ocamlmod.0.0.8)
+- File "./setup.ml", line 268, characters 8-26:
+- Warning 3: deprecated: String.set
+- Use Bytes.set instead.
+- File "./setup.ml", line 341, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 341, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 350, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 353, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 391, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 497, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1841, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1847, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 2523, characters 6-24:
+- Warning 3: deprecated: Lazy.lazy_from_fun
+- Use Lazy.from_fun instead.
+- File "setup.ml", line 5857, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5858, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5859, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5860, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5925, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5926, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5927, characters 31-50:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5928, characters 31-48:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+-> installed ocamlmod.0.0.8
+[91m
+#=== ERROR while installing oasis.0.4.7 =======================================#
+# opam-version         1.2.2
+# os                   linux
+# command              tar xfz /home/opam/.opam/packages.dev/oasis.0.4.7/oasis-0.4.7.tar.gz -C /tmp/opam-7-fbcac7
+# path                 /home/opam/src
+# exit-code            2
+# env-file             /home/opam/.opam/log/log-7-326a35.env
+# stdout-file          /home/opam/.opam/log/log-7-326a35.out
+# stderr-file          /home/opam/.opam/log/log-7-326a35.err
+### stderr ###
+# 
+# tar: Exiting with failure status due to previous errors
+
+[0m+ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/re.1.6.1)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "_tags", line 43, characters 34-43:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 49, characters 36-45:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 55, characters 37-46:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 61, characters 36-45:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 67, characters 35-44:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 76, characters 36-45:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 81, characters 36-45:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- File "_tags", line 84, characters 23-32:
+- Warning: the tag "pkg_oUnit" is not used in any flag or dependency declaration, so it will have no effect; it may be a typo. Otherwise you can use `mark_tag_used` in your myocamlbuild.ml to disable this warning.
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re.mli > lib/re.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re.cmi lib/re.mli
+- + /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re.cmi lib/re.mli
+- File "lib/re.mli", line 125, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 132, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 138, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 146, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 152, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 160, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 170, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 175, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 180, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 182, characters 17-78:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 183, characters 17-38:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 185, characters 16-43:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 192, characters 17-34:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 194, characters 17-78:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 195, characters 17-38:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 196, characters 17-42:
+- Warning 50: unattached documentation comment (ignored)
+- File "lib/re.mli", line 197, characters 17-44:
+- Warning 50: unattached documentation comment (ignored)
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re.ml > lib/re.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_automata.mli > lib/re_automata.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_cset.mli > lib/re_cset.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_cset.cmi lib/re_cset.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_fmt.ml > lib/re_fmt.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_automata.cmi lib/re_automata.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_fmt.cmo lib/re_fmt.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_cset.ml > lib/re_cset.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_automata.ml > lib/re_automata.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re.cmo lib/re.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_cset.cmo lib/re_cset.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_automata.cmo lib/re_automata.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_fmt.cmo lib/re_cset.cmo lib/re_automata.cmo lib/re.cmo -o lib/re.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_fmt.cmx lib/re_fmt.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_cset.cmx lib/re_cset.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_automata.cmx lib/re_automata.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re.cmx lib/re.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_fmt.cmx lib/re_cset.cmx lib/re_automata.cmx lib/re.cmx -o lib/re.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re.cmxa lib/re_fmt.cmx lib/re_cset.cmx lib/re_automata.cmx lib/re.cmx -o lib/re.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_emacs.mli > lib/re_emacs.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_emacs.cmi lib/re_emacs.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_emacs.ml > lib/re_emacs.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_emacs.cmo lib/re_emacs.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_emacs.cmo -o lib/re_emacs.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_emacs.cmx lib/re_emacs.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_emacs.cmx -o lib/re_emacs.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_emacs.cmxa lib/re_emacs.cmx -o lib/re_emacs.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_str.mli > lib/re_str.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_str.cmi lib/re_str.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_str.ml > lib/re_str.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_str.cmo lib/re_str.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_str.cmo -o lib/re_str.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_str.cmx lib/re_str.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_str.cmx -o lib/re_str.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_str.cmxa lib/re_str.cmx -o lib/re_str.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_posix.mli > lib/re_posix.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_posix.cmi lib/re_posix.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_posix.ml > lib/re_posix.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_posix.cmo lib/re_posix.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_posix.cmo -o lib/re_posix.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_posix.cmx lib/re_posix.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_posix.cmx -o lib/re_posix.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_posix.cmxa lib/re_posix.cmx -o lib/re_posix.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_glob.mli > lib/re_glob.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_glob.cmi lib/re_glob.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_glob.ml > lib/re_glob.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_glob.cmo lib/re_glob.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_glob.cmo -o lib/re_glob.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_glob.cmx lib/re_glob.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_glob.cmx -o lib/re_glob.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_glob.cmxa lib/re_glob.cmx -o lib/re_glob.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_perl.mli > lib/re_perl.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_perl.cmi lib/re_perl.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_perl.ml > lib/re_perl.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_perl.cmo lib/re_perl.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_perl.cmo -o lib/re_perl.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_perl.cmx lib/re_perl.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_perl.cmx -o lib/re_perl.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_perl.cmxa lib/re_perl.cmx -o lib/re_perl.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_pcre.mli > lib/re_pcre.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_pcre.cmi lib/re_pcre.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/re_pcre.ml > lib/re_pcre.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_pcre.cmo lib/re_pcre.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/re_pcre.cmo -o lib/re_pcre.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -w +a-40-42-44-3-4-48 -warn-error +1..49 -g -annot -bin-annot -I lib -I lib -I lib -package bytes -I lib -o lib/re_pcre.cmx lib/re_pcre.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/re_pcre.cmx -o lib/re_pcre.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/re_pcre.cmxa lib/re_pcre.cmx -o lib/re_pcre.cmxs
+
+
+=-=- Error report -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+The following actions were aborted
+  - install nbd       2.1.0    
+  - install stringext 1.4.2    
+  - install type_conv 113.00.02
+  - install uri       1.9.2    
+The following actions failed
+  - install oasis 0.4.7
+  - install re    1.6.1
+The following changes have been performed
+  - install mirage-block-unix 2.3.0
+  - install ocamlify          0.0.1
+  - install ocamlmod          0.0.8
+[91m
+The former state can be restored with:
+    opam switch import "~/.opam/4.03.0/backup/state-20160808110651.export"
+[0m[91m'opam install --verbose --yes --jobs=2 nbd' failed.
+[0mRemoving intermediate container 90e8e4b7fd11
+The command '/bin/sh -c opam depext -uiyv -j 2 nbd' returned a non-zero code: 4
+[2016-09-08 11:36.40] Failed: Build exit 4
