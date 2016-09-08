@@ -1,0 +1,1 @@
+(Allowed failure) Command "sh" "-c" "docker build --label com.docker.datakit.digest=8c3f5ca31a98352ea05c6e8c896e9e9d --label com.docker.datakit.builton=1473278404.17 -t mirageci2:8c3f5ca31a98352ea05c6e8c896e9e9d --no-cache --rm --force-rm - < /tmp/tmp-2a808bea/Dockerfile" exited with status 1
