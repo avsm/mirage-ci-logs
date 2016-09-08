@@ -1,0 +1,44 @@
+=== Building b8b215c82243a346744ded7d0b026dbe
+[2016-09-08 10:28.44] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:0459446534ace8e2e871ef398caf8d7e1fc5cc57d52e58bcd3da664abfcaeed1
+ ---> 0459446534ac
+Step 2 : RUN opam depext -uiyv -j 2 mirage-fs
+ ---> Running in c9b6c244bdbc
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - m4
+#  - ncurses-dev
+#  - pkgconfig
+m4
+ncurses-dev
+pkgconfig
+# All required OS packages found.
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install mirage-fs 0.6.0
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: http] Command started
+[mirage-fs: http] Command started
+[mirage-fs.0.6.0] https://github.com/mirage/mirage-fs/archive/v0.6.0.tar.gz downloaded
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[mirage-fs: make all] Command started
++ make "all" (CWD=/home/opam/.opam/4.03.0/build/mirage-fs.0.6.0)
+- cd crunch && ocamlbuild  crunch.native
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamldep.opt -modules crunch.ml > crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c -o crunch.cmo crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt -c -o crunch.cmx crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlc.opt -c custom_unix_stubs.c
+- /home/opam/.opam/4.03.0/bin/ocamlmklib -o crunch custom_unix_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa crunch.cmx libcrunch.a -o crunch.native
+-> installed mirage-fs.0.6.0
+Done.
+ ---> 01ce1862d16b
+Removing intermediate container c9b6c244bdbc
+Step 3 : LABEL "com.docker.datakit.builton" "1473330524.37" "com.docker.datakit.digest" "b8b215c82243a346744ded7d0b026dbe"
+ ---> Running in 8d472e601dbc
+ ---> 33e275e35d79
+[2016-09-08 11:35.34] Failed: Exceeded timeout of 60 minutes
