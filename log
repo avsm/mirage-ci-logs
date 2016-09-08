@@ -1,0 +1,8 @@
+=== Building 2e4495f2764f7a7280d7de404de30c7a
+[2016-09-08 12:04.42] Starting...
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+open /var/lib/docker/zfs/graph/2e95e5dc5765390d62e9db9d910e5ba1d43cc08b834b70281ed8ddf1a8b7a022-init/.dockerenv: no space left on device
+[2016-09-08 12:46.45] Failed: Build exit 1
