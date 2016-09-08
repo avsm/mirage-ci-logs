@@ -1,1 +1,1 @@
-Wait Debian Testing
+Command "sh" "-c" "docker build --label com.docker.datakit.digest=76e1e1f1f34fe45aca5c24e040b8a68f --label com.docker.datakit.builton=1473287774.16 -t mirageci2:76e1e1f1f34fe45aca5c24e040b8a68f --no-cache --rm --force-rm - < /tmp/tmp-20f7ea96/Dockerfile" exited with status 1
