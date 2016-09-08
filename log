@@ -1,0 +1,49 @@
+=== Building b817ac56e7415560afa186bab99189b0
+[2016-09-08 10:28.50] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:cd8f64c1f2321d0892f922150b1243f140733ead1a1c57086876c8833c7cf3fd
+ ---> cd8f64c1f232
+Step 2 : RUN opam depext -uiyv -j 2 imaplet-lwt
+ ---> Running in bc42000f124d
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - autoconf
+#  - gmp-dev
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - openssl-dev
+#  - perl
+#  - pkgconfig
+#  - zlib-dev
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+(1/7) Installing perl (5.22.2-r0)
+ERROR: Failed to create usr/share/perl5/core_perl/TAP/Parser/Result/Bailout.pm: No space left on device
+ERROR: perl-5.22.2-r0: No space left on device
+(2/7) Installing autoconf (2.69-r0)
+(3/7) Installing libgmpxx (6.1.0-r0)
+(4/7) Installing gmp-dev (6.1.0-r0)
+(5/7) Installing linux-headers (4.4.6-r1)
+(6/7) Installing zlib-dev (1.2.8-r2)
+(7/7) Installing openssl-dev (1.0.2h-r1)
+Executing busybox-1.24.2-r11.trigger
+1 errors; 450 MiB in 90 packages
+[91mOS package installation failed
+[0mRemoving intermediate container bc42000f124d
+The command '/bin/sh -c opam depext -uiyv -j 2 imaplet-lwt' returned a non-zero code: 1
+[2016-09-08 11:36.43] Failed: Build exit 1
