@@ -1,1 +1,1 @@
-Command "sh" "-c" "docker build --label com.docker.datakit.digest=7504354559568b8e7b7a68b5b485f232 --label com.docker.datakit.builton=1473287727.12 -t mirageci2:7504354559568b8e7b7a68b5b485f232 --no-cache --rm --force-rm - < /tmp/tmp-1ea1868f/Dockerfile" exited with status 1
+Wait Fedora 24
