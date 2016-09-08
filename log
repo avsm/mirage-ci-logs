@@ -1,0 +1,9 @@
+=== Building 5e336cc3ca1a4a20e1a3d94731858b45
+[2016-09-08 12:04.11] Starting...
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+exit status 1: "/sbin/zfs zfs snapshot zpool-docker/docker/1f964a304bbcfae3e51610ec88f01f7028b258580ee889cb754d71dc4a69a74a@43377238" => cannot create snapshots : out of space
+
+[2016-09-08 12:23.39] Failed: Build exit 1
