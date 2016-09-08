@@ -1,0 +1,5 @@
+=== Building 3fdf3637bcabce786da1dac6ce8bd973
+[2016-09-08 12:04.27] Starting...
+Sending build context to Docker daemon  2.56 kB
+Error response from daemon: mkdir /var/lib/docker/tmp/docker-builder383951242: no space left on device
+[2016-09-08 12:23.39] Failed: Build exit 1
