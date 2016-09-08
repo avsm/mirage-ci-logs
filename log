@@ -1,0 +1,1122 @@
+=== Building 1c4ba92177c17da89b1e0c353abcfd42
+[2016-09-08 10:28.45] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:abc1eba3d8315cdbaa57c7db9c6566efcf9d84aa25f8724abd7ff7662dfb264c
+ ---> abc1eba3d831
+Step 2 : RUN opam depext -uiyv -j 2 imaplet-lwt
+ ---> Running in 22cafabb2a8b
+# Detecting depexts using flags: x86_64 linux alpine
+# The following system packages are needed:
+#  - autoconf
+#  - gmp-dev
+#  - linux-headers
+#  - m4
+#  - ncurses-dev
+#  - openssl-dev
+#  - perl
+#  - pkgconfig
+#  - zlib-dev
+m4
+ncurses-dev
+pkgconfig
+# The following new OS packages need to be installed: autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+The following command needs to be run through "sudo":
+    apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+fetch http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4/x86_64/APKINDEX.tar.gz
+v3.4.3-9-g6e6de70 [http://dl-cdn.alpinelinux.org/alpine/v3.4/main]
+v3.4.2-11-g9b41a63 [http://dl-cdn.alpinelinux.org/alpine/v3.4/community]
+testing v3.3.0-55-g55836a9 [http://www.cl.cam.ac.uk/~avsm2/alpine-ocaml/3.4]
+OK: 5969 distinct packages available
+# OS package update successful
+The following command needs to be run through "sudo":
+    apk add autoconf gmp-dev linux-headers openssl-dev perl zlib-dev
+(1/7) Installing perl (5.22.2-r0)
+(2/7) Installing autoconf (2.69-r0)
+(3/7) Installing libgmpxx (6.1.0-r0)
+(4/7) Installing gmp-dev (6.1.0-r0)
+(5/7) Installing linux-headers (4.4.6-r1)
+(6/7) Installing zlib-dev (1.2.8-r2)
+(7/7) Installing openssl-dev (1.0.2h-r1)
+Executing busybox-1.24.2-r11.trigger
+OK: 494 MiB in 91 packages
+# OS packages installation successful
+# Now letting OPAM install the packages
+The following actions will be performed:
+  - install conf-perl        1                                  [required by zarith]
+  - install stringext        1.4.2                              [required by cohttp, irmin]
+  - install base64           2.0.0                              [required by cohttp]
+  - install magic-mime       1.0.0                              [required by cohttp]
+  - install menhir           20160825                           [required by imaplet-lwt]
+  - install conf-gmp         1                                  [required by zarith]
+  - install fieldslib        113.24.00                          [required by cohttp]
+  - install ocamlify         0.0.1                              [required by oasis]
+  - install mtime            0.8.3                              [required by git]
+  - install ocamlmod         0.0.8                              [required by oasis]
+  - install bin_prot         113.33.00+4.03                     [required by mirage-tc]
+  - install mirage-no-solo5  1                                  [required by nocrypto]
+  - install uutf             0.9.4                              [required by jsonm]
+  - install mstruct          1.3.2                              [required by git, irmin]
+  - install crunch           1.4.1                              [required by irmin]
+  - install mirage-no-xen    1                                  [required by nocrypto]
+  - install hex              1.0.0                              [required by git, irmin]
+  - install re               1.6.1                              [required by imaplet-lwt]
+  - install ptime            0.8.2                              [required by tls]
+  - install zarith           1.4.1                              [required by nocrypto]
+  - install ppx_fields_conv  113.33.00+4.03                     [required by cohttp]
+  - install oasis            0.4.7                              [required by crc]
+  - install jsonm            0.9.1                              [required by ezjsonm]
+  - install uri              1.9.2                              [required by git, cohttp, irmin]
+  - install asn1-combinators 0.1.2                              [required by x509]
+  - install nocrypto         dev~mirage                         [required by git]
+  - install crc              1.0.0                              [required by git]
+  - install ezjsonm          0.4.3                              [required by irmin]
+  - install x509             0.5.2                              [required by tls]
+  - install mirage-tc        0.3.0                              [required by irmin]
+  - install tls              dev~mirage                         [required by imaplet-lwt]
+  - install conduit          0.12.0                             [required by cohttp, git]
+  - install cohttp           0.21.0                             [required by imaplet-lwt]
+  - install git              1.8.0                              [required by imaplet-lwt]
+  - install irmin            0.11.1                             [required by imaplet-lwt]
+  - install imaplet-lwt      0.1.10        
+===== 36 to install =====
+
+=-=- Gathering sources =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[asn1-combinators: http] Command started
+[base64: http] Command started
+[bin_prot: http] Command started
+[bin_prot: http] Command started
+[bin_prot.113.33.00+4.03] https://ocaml.janestreet.com/ocaml-core/113.33/files/bin_prot-113.33.00+4.03.tar.gz downloaded
+[cohttp: http] Command started
+[base64: http] Command started
+[base64.2.0.0] https://github.com/mirage/ocaml-base64/archive/v2.0.0.tar.gz downloaded
+[conduit: http] Command started
+[conduit: http] Command started
+[conduit.0.12.0] https://github.com/mirage/ocaml-conduit/archive/v0.12.0.tar.gz downloaded
+[crc: http] Command started
+[asn1-combinators: http] Command started
+[cohttp: http] Command started
+[crc: http] Command started
+[asn1-combinators.0.1.2] https://github.com/mirleft/ocaml-asn1-combinators/archive/0.1.2.tar.gz downloaded
+[crunch: http] Command started
+[cohttp.0.21.0] https://github.com/mirage/ocaml-cohttp/archive/v0.21.0.tar.gz downloaded
+[ezjsonm: http] Command started
+[crc.1.0.0] https://github.com/xapi-project/ocaml-crc/archive/1.0.0.tar.gz downloaded
+[fieldslib: http] Command started
+[fieldslib: http] Command started
+[fieldslib.113.24.00] https://ocaml.janestreet.com/ocaml-core/113.24/files/fieldslib-113.24.00.tar.gz downloaded
+[git: http] Command started
+[crunch: http] Command started
+[ezjsonm: http] Command started
+[crunch.1.4.1] https://github.com/mirage/ocaml-crunch/archive/v1.4.1.tar.gz downloaded
+[hex: http] Command started
+[ezjsonm.0.4.3] https://github.com/mirage/ezjsonm/archive/0.4.3.tar.gz downloaded
+[imaplet-lwt: http] Command started
+[hex: http] Command started
+[git: http] Command started
+[hex.1.0.0] https://github.com/mirage/ocaml-hex/archive/1.0.0.tar.gz downloaded
+[irmin: http] Command started
+[git.1.8.0] https://github.com/mirage/ocaml-git/archive/1.8.0.tar.gz downloaded
+[jsonm: http] Command started
+[jsonm: http] Command started
+[jsonm.0.9.1] http://erratique.ch/software/jsonm/releases/jsonm-0.9.1.tbz downloaded
+[magic-mime: http] Command started
+[magic-mime: http] Command started
+[magic-mime.1.0.0] https://github.com/mirage/ocaml-magic-mime/archive/v1.0.0.tar.gz downloaded
+[menhir: http] Command started
+[imaplet-lwt: http] Command started
+[imaplet-lwt.0.1.10] https://github.com/gregtatcam/imaplet-lwt/archive/v0.1.10.tar.gz downloaded
+[mirage-tc: http] Command started
+[irmin: http] Command started
+[irmin.0.11.1] https://github.com/mirage/irmin/archive/0.11.1.tar.gz downloaded
+[mstruct: http] Command started
+[menhir: http] Command started
+[mstruct: http] Command started
+[menhir.20160825] http://gallium.inria.fr/~fpottier/menhir/menhir-20160825.tar.gz downloaded
+[mtime: http] Command started
+[mstruct.1.3.2] https://github.com/mirage/ocaml-mstruct/archive/1.3.2.tar.gz downloaded
+[nocrypto: git] Command started
+[nocrypto: git] Command started
+[nocrypto: git] Command started
+[nocrypto: git] Command started
+[nocrypto: git] Command started
+[mtime: http] Command started
+[mtime.0.8.3] http://erratique.ch/software/mtime/releases/mtime-0.8.3.tbz downloaded
+[oasis: http] Command started
+[oasis: http] Command started
+[oasis.0.4.7] https://forge.ocamlcore.org/frs/download.php/1635/oasis-0.4.7.tar.gz downloaded
+[ocamlify: http] Command started
+[ocamlify: http] Command started
+[ocamlify.0.0.1] http://forge.ocamlcore.org/frs/download.php/379/ocamlify-0.0.1.tar.gz downloaded
+[ocamlmod: http] Command started
+[ocamlmod: http] Command started
+[ocamlmod.0.0.8] https://forge.ocamlcore.org/frs/download.php/1544/ocamlmod-0.0.8.tar.gz downloaded
+[ppx_fields_conv: http] Command started
+[ppx_fields_conv: http] Command started
+[ppx_fields_conv.113.33.00+4.03] https://ocaml.janestreet.com/ocaml-core/113.33/files/ppx_fields_conv-113.33.00+4.03.tar.gz downloaded
+[ptime: http] Command started
+[ptime: http] Command started
+[ptime.0.8.2] http://erratique.ch/software/ptime/releases/ptime-0.8.2.tbz downloaded
+[re: http] Command started
+[mirage-tc: http] Command started
+[mirage-tc.0.3.0] https://github.com/mirage/mirage-tc/archive/0.3.0.tar.gz downloaded
+[stringext: http] Command started
+[re: http] Command started
+[re.1.6.1] https://github.com/ocaml/ocaml-re/archive/1.6.1.tar.gz downloaded
+[tls: git] Command started
+[tls: git] Command started
+[tls: git] Command started
+[tls: git] Command started
+[tls: git] Command started
+[stringext: http] Command started
+[stringext.1.4.2] https://github.com/rgrinberg/stringext/archive/v1.4.2.tar.gz downloaded
+[uri: http] Command started
+[uri: http] Command started
+[uri.1.9.2] https://github.com/mirage/ocaml-uri/archive/v1.9.2.tar.gz downloaded
+[uutf: http] Command started
+[uutf: http] Command started
+[uutf.0.9.4] http://erratique.ch/software/uutf/releases/uutf-0.9.4.tbz downloaded
+[x509: http] Command started
+[x509: http] Command started
+[x509.0.5.2] https://github.com/mirleft/ocaml-x509/archive/0.5.2.tar.gz downloaded
+[zarith: http] Command started
+[tls: git] Command started
+[zarith: http] Command started
+[zarith.1.4.1] https://forge.ocamlcore.org/frs/download.php/1574/zarith-1.4.1.tgz downloaded
+[nocrypto: git] Command started
+[nocrypto] git://github.com/hannesm/ocaml-nocrypto.git#p updated
+[tls] https://github.com/mirleft/ocaml-tls.git updated
+
+=-=- Processing actions -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[base64: ocaml setup.ml] Command started
+[bin_prot: ./configure] Command started
++ ocaml "setup.ml" "-configure" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/base64.2.0.0)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ base64
+- Package version: ..................................... 2.0.0
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bytes: ........................................... /home/opam/.opam/4.03.0/lib/bytes
+- ocamldoc: ............................................ /home/opam/.opam/4.03.0/bin/ocamldoc
+- 
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[base64: ocaml setup.ml] Command started
++ ./configure "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/bin_prot.113.33.00+4.03)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ bin_prot
+- Package version: ..................................... 113.33.00+4.03
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bigarray: ........................................ /home/opam/.opam/4.03.0/lib/ocaml
+- 
+- File "./setup.ml", line 316, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 316, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 325, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 325, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 328, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 366, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 472, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1823, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1829, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[bin_prot: make] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/base64.2.0.0)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/b64.mli > lib/b64.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -safe-string -package bytes -I lib -o lib/b64.cmi lib/b64.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bytes -modules lib/b64.ml > lib/b64.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -safe-string -package bytes -I lib -o lib/b64.cmo lib/b64.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/b64.cmo -o lib/base64.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -safe-string -package bytes -I lib -o lib/b64.cmx lib/b64.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/b64.cmx -o lib/base64.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/base64.cmxa lib/b64.cmx -o lib/base64.cmxs
+- + /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "myocamlbuild.ml", line 518, characters 43-62:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "myocamlbuild.ml", line 531, characters 51-70:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[base64: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/base64.2.0.0)
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.mli
+- Installed /home/opam/.opam/4.03.0/lib/base64/base64.cma
+- Installed /home/opam/.opam/4.03.0/lib/base64/base64.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/base64/base64.a
+- Installed /home/opam/.opam/4.03.0/lib/base64/base64.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.cmi
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.cmti
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.cmt
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.annot
+- Installed /home/opam/.opam/4.03.0/lib/base64/b64.cmx
+- Installed /home/opam/.opam/4.03.0/lib/base64/META
+-> installed base64.2.0.0
+[conf-gmp: sh] Command started
++ sh "-exc" "cc -c $CFLAGS -I/usr/local/include test.c" (CWD=/home/opam/.opam/4.03.0/build/conf-gmp.1)
+- + cc -c -I/usr/local/include test.c
+- test.c: In function 'test':
+- test.c:7:2: warning: implicit declaration of function '__gmp_init' [-Wimplicit-function-declaration]
+-   __gmp_init();
+-   ^
+-> installed conf-gmp.1
+[conf-perl: perl] Command started
++ perl "--version" (CWD=/home/opam/.opam/4.03.0/build/conf-perl.1)
+- 
+- This is perl 5, version 22, subversion 2 (v5.22.2) built for x86_64-linux-thread-multi
+- 
+- Copyright 1987-2015, Larry Wall
+- 
+- Perl may be copied only under the terms of either the Artistic License or the
+- GNU General Public License, which may be found in the Perl 5 source kit.
+- 
+- Complete documentation for Perl, including FAQ lists, should be found on
+- this system using "man perl" or "perldoc perl".  If you have access to the
+- Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+- 
+-> installed conf-perl.1
+[crunch: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-configure" "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/crunch.1.4.1)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ crunch
+- Package version: ..................................... 1.4.1
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_unix: ............................................ /home/opam/.opam/4.03.0/lib/ocaml
+- pkg_cmdliner: ........................................ /home/opam/.opam/4.03.0/lib/cmdliner
+- 
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[crunch: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-build" (CWD=/home/opam/.opam/4.03.0/build/crunch.1.4.1)
+- /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package cmdliner -package unix -modules lib/crunch.mli > lib/crunch.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -I lib -package cmdliner -package unix -I lib -o lib/crunch.cmi lib/crunch.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package cmdliner -package unix -modules lib/crunch.ml > lib/crunch.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -I lib -package cmdliner -package unix -I lib -o lib/crunch.cmo lib/crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a lib/crunch.cmo -o lib/crunch.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -I lib -package cmdliner -package unix -I lib -o lib/crunch.cmx lib/crunch.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a lib/crunch.cmx -o lib/crunch.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared lib/crunch.cmxa lib/crunch.cmx -o lib/crunch.cmxs
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package cmdliner -package unix -modules lib/main.ml > lib/main.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -I lib -package cmdliner -package unix -I lib -o lib/main.cmo lib/main.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -I lib -package cmdliner -package unix -I lib -o lib/main.cmx lib/main.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -g -linkpkg -package cmdliner -package unix lib/crunch.cmxa lib/main.cmx -o lib/main.native
+- + /home/opam/.opam/4.03.0/bin/ocamlopt.opt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "myocamlbuild.ml", line 518, characters 43-62:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "myocamlbuild.ml", line 531, characters 51-70:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[crunch: ocaml setup.ml] Command started
++ ocaml "setup.ml" "-install" (CWD=/home/opam/.opam/4.03.0/build/crunch.1.4.1)
+- File "./setup.ml", line 318, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 318, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 327, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 330, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 368, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 474, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1825, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1831, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.mli
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cma
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmxa
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.a
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmxs
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmi
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmti
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmt
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.annot
+- Installed /home/opam/.opam/4.03.0/lib/crunch/crunch.cmx
+- Installed /home/opam/.opam/4.03.0/lib/crunch/META
+-> installed crunch.1.4.1
+[fieldslib: ./configure] Command started
++ ./configure "--prefix" "/home/opam/.opam/4.03.0" (CWD=/home/opam/.opam/4.03.0/build/fieldslib.113.24.00)
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ fieldslib
+- Package version: ..................................... 113.24.00
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /home/opam/.opam/4.03.0
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- 
+- File "./setup.ml", line 316, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 316, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 325, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 325, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 328, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 366, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 472, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "./setup.ml", line 1823, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "./setup.ml", line 1829, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+[fieldslib: make] Command started
++ make  (CWD=/home/opam/.opam/4.03.0/build/bin_prot.113.33.00+4.03)
+- ocamlopt.opt -o setup.exe setup.ml || ocamlopt -o setup.exe setup.ml || ocamlc -o setup.exe setup.ml
+- for f in setup.*; do [ $f = setup.exe -o $f = setup.ml ] || rm -f $f; done
+- ./setup.exe -configure 
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ bin_prot
+- Package version: ..................................... 113.33.00+4.03
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /usr/local
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- pkg_bigarray: ........................................ /home/opam/.opam/4.03.0/lib/ocaml
+- 
+- ./setup.exe -build 
+- ocamlfind ocamlopt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa -linkpkg myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -thread -package bigarray -c src/blit_stubs.c
+- mv blit_stubs.o src/blit_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -g -thread -package bigarray -c src/float_stubs.c
+- mv float_stubs.o src/float_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlmklib -o src/bin_prot_stubs src/blit_stubs.o src/float_stubs.o
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/binable.ml > src/binable.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/read.mli > src/read.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/common.mli > src/common.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/nat0.mli > src/nat0.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -predicates ppx_driver -w -40 -I src -o src/common.cmi src/common.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -predicates ppx_driver -w -40 -I src -o src/nat0.cmi src/nat0.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/size.mli > src/size.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/type_class.mli > src/type_class.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -w -40 -I src -o src/read.cmi src/read.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -w -40 -I src -o src/size.cmi src/size.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/write.mli > src/write.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -w -40 -I src -o src/write.cmi src/write.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -w -40 -I src -o src/type_class.cmi src/type_class.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/blob.mli > src/blob.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/binable.cmo src/binable.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -predicates ppx_driver -w -40 -I src -o src/blob.cmi src/blob.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/blob.ml > src/blob.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/utils.mli > src/utils.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -predicates ppx_driver -w -40 -I src -o src/utils.cmi src/utils.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/common.ml > src/common.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/nat0.ml > src/nat0.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/read.ml > src/read.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/size.ml > src/size.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/std.ml > src/std.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/type_class.ml > src/type_class.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/utils.ml > src/utils.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -predicates ppx_driver -predicates ppx_driver -modules src/write.ml > src/write.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/blob.cmo src/blob.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/common.cmo src/common.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/nat0.cmo src/nat0.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/read.cmo src/read.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/size.cmo src/size.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/std.cmo src/std.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/type_class.cmo src/type_class.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/utils.cmo src/utils.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/write.cmo src/write.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -pack -g -annot -bin-annot src/common.cmo src/nat0.cmo src/write.cmo src/read.cmo src/size.cmo src/type_class.cmo src/binable.cmo src/utils.cmo src/blob.cmo src/std.cmo -o src/bin_prot.cmo
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a -thread -dllib -lbin_prot_stubs -cclib -lbin_prot_stubs src/bin_prot.cmo -o src/bin_prot.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/common.cmx src/common.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/nat0.cmx src/nat0.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/write.cmx src/write.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/read.cmx src/read.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/size.cmx src/size.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -pp 'gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC -E -xc -undef -w' -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/type_class.cmx src/type_class.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/binable.cmx src/binable.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/utils.cmx src/utils.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/blob.cmx src/blob.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -package bigarray -for-pack Bin_prot -predicates ppx_driver -w -40 -I src -o src/std.cmx src/std.ml
+- touch src/bin_prot.mli  ; if  /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -pack -g -annot -bin-annot -I src src/common.cmx src/nat0.cmx src/write.cmx src/read.cmx src/size.cmx src/type_class.cmx src/binable.cmx src/utils.cmx src/blob.cmx src/std.cmx -o src/bin_prot.cmx  ; then  rm -f src/bin_prot.mli  ; else  rm -f src/bin_prot.mli  ; exit 1; fi
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a -thread -cclib -lbin_prot_stubs src/bin_prot.cmx -o src/bin_prot.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared -linkall -I src src/bin_prot.cmxa -o src/bin_prot.cmxs
+- + ocamlfind ocamlopt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa -linkpkg myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "myocamlbuild.ml", line 518, characters 43-62:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "myocamlbuild.ml", line 531, characters 51-70:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- make bin_prot.install
+- make[1]: Entering directory '/home/opam/.opam/4.03.0/build/bin_prot.113.33.00+4.03'
+- ocaml -I js-utils js-utils/gen_install.ml
+- make[1]: Leaving directory '/home/opam/.opam/4.03.0/build/bin_prot.113.33.00+4.03'
+- File "setup.ml", line 316, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 316, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 325, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 325, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 328, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 366, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 472, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 1823, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 1829, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- W: Cannot find source file matching module 'bin_prot' in library bin_prot
+-> installed bin_prot.113.33.00+4.03
++ make  (CWD=/home/opam/.opam/4.03.0/build/fieldslib.113.24.00)
+- ocamlopt.opt -o setup.exe setup.ml || ocamlopt -o setup.exe setup.ml || ocamlc -o setup.exe setup.ml
+- for f in setup.*; do [ $f = setup.exe -o $f = setup.ml ] || rm -f $f; done
+- ./setup.exe -configure 
+- 
+- Configuration: 
+- ocamlfind: ........................................... /home/opam/.opam/4.03.0/bin/ocamlfind
+- ocamlc: .............................................. /home/opam/.opam/4.03.0/bin/ocamlc.opt
+- ocamlopt: ............................................ /home/opam/.opam/4.03.0/bin/ocamlopt.opt
+- ocamlbuild: .......................................... /home/opam/.opam/4.03.0/bin/ocamlbuild
+- Package name: ........................................ fieldslib
+- Package version: ..................................... 113.24.00
+- os_type: ............................................. Unix
+- system: .............................................. linux
+- architecture: ........................................ amd64
+- ccomp_type: .......................................... cc
+- ocaml_version: ....................................... 4.03.0
+- standard_library_default: ............................ /home/opam/.opam/4.03.0/lib/ocaml
+- standard_library: .................................... /home/opam/.opam/4.03.0/lib/ocaml
+- standard_runtime: .................................... /home/opam/.opam/4.03.0/bin/ocamlrun
+- bytecomp_c_compiler: ................................. gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT -fPIC
+- native_c_compiler: ................................... gcc -std=gnu99 -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT
+- model: ............................................... default
+- ext_obj: ............................................. .o
+- ext_asm: ............................................. .s
+- ext_lib: ............................................. .a
+- ext_dll: ............................................. .so
+- default_executable_name: ............................. a.out
+- systhread_supported: ................................. true
+- Install architecture-independent files dir: .......... /usr/local
+- Install architecture-dependent files in dir: ......... $prefix
+- User executables: .................................... $exec_prefix/bin
+- System admin executables: ............................ $exec_prefix/sbin
+- Program executables: ................................. $exec_prefix/libexec
+- Read-only single-machine data: ....................... $prefix/etc
+- Modifiable architecture-independent data: ............ $prefix/com
+- Modifiable single-machine data: ...................... $prefix/var
+- Object code libraries: ............................... $exec_prefix/lib
+- Read-only arch-independent data root: ................ $prefix/share
+- Read-only architecture-independent data: ............. $datarootdir
+- Info documentation: .................................. $datarootdir/info
+- Locale-dependent data: ............................... $datarootdir/locale
+- Man documentation: ................................... $datarootdir/man
+- Documentation root: .................................. $datarootdir/doc/$pkg_name
+- HTML documentation: .................................. $docdir
+- DVI documentation: ................................... $docdir
+- PDF documentation: ................................... $docdir
+- PS documentation: .................................... $docdir
+- findlib_version: ..................................... 1.6.2
+- is_native: ........................................... true
+- suffix_program: ...................................... 
+- Remove a file.: ...................................... rm -f
+- Remove a directory.: ................................. rm -rf
+- Turn ocaml debug flag on: ............................ true
+- Turn ocaml profile flag on: .......................... false
+- Compiler support generation of .cmxs.: ............... true
+- OCamlbuild additional flags: ......................... 
+- Create documentations: ............................... true
+- Compile tests executable and library and run them: ... false
+- 
+- ./setup.exe -build 
+- ocamlfind ocamlopt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa -linkpkg myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -predicates ppx_driver -predicates ppx_driver -modules src/field.mli > src/field.mli.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -predicates ppx_driver -w -40 -I src -o src/field.cmi src/field.mli
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamldep -predicates ppx_driver -predicates ppx_driver -modules src/field.ml > src/field.ml.depends
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -c -g -annot -bin-annot -no-alias-deps -thread -for-pack Fieldslib -predicates ppx_driver -w -40 -I src -o src/field.cmo src/field.ml
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -pack -g -annot -bin-annot src/field.cmo -o src/fieldslib.cmo
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlc -a -thread src/fieldslib.cmo -o src/fieldslib.cma
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -no-alias-deps -thread -for-pack Fieldslib -predicates ppx_driver -w -40 -I src -o src/field.cmx src/field.ml
+- touch src/fieldslib.mli  ; if  /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -pack -g -annot -bin-annot -I src src/field.cmx -o src/fieldslib.cmx  ; then  rm -f src/fieldslib.mli  ; else  rm -f src/fieldslib.mli  ; exit 1; fi
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -a -thread src/fieldslib.cmx -o src/fieldslib.cmxa
+- /home/opam/.opam/4.03.0/bin/ocamlfind ocamlopt -shared -linkall -I src src/fieldslib.cmxa -o src/fieldslib.cmxs
+- + ocamlfind ocamlopt unix.cmxa -I /home/opam/.opam/4.03.0/lib/ocamlbuild /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuildlib.cmxa -linkpkg myocamlbuild.ml /home/opam/.opam/4.03.0/lib/ocamlbuild/ocamlbuild.cmx -o myocamlbuild
+- File "myocamlbuild.ml", line 518, characters 43-62:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "myocamlbuild.ml", line 531, characters 51-70:
+- Warning 3: deprecated: Ocamlbuild_plugin.String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- make fieldslib.install
+- make[1]: Entering directory '/home/opam/.opam/4.03.0/build/fieldslib.113.24.00'
+- ocaml -I js-utils js-utils/gen_install.ml
+- make[1]: Leaving directory '/home/opam/.opam/4.03.0/build/fieldslib.113.24.00'
+- File "setup.ml", line 316, characters 20-36:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 316, characters 42-58:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 325, characters 14-30:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 325, characters 38-54:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 328, characters 25-41:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 366, characters 10-26:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 472, characters 13-29:
+- Warning 3: deprecated: String.lowercase
+- Use String.lowercase_ascii instead.
+- File "setup.ml", line 1823, characters 16-33:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 1829, characters 16-35:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- File "setup.ml", line 5847, characters 11-28:
+- Warning 3: deprecated: String.capitalize
+- Use String.capitalize_ascii instead.
+- File "setup.ml", line 5848, characters 11-30:
+- Warning 3: deprecated: String.uncapitalize
+- Use String.uncapitalize_ascii instead.
+- W: Cannot find source file matching module 'fieldslib' in library fieldslib
+-> installed fieldslib.113.24.00
+[91m
+#=== ERROR while installing hex.1.0.0 =========================================#
+# opam-version    1.2.2
+# os              linux
+opam: "open" failed on /home/opam/.opam/log/log-7-9de511.err: No space left on device
+[0m
+
+=-=- Error report -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+The following actions were aborted
+  - install asn1-combinators 0.1.2         
+  - install cohttp           0.21.0        
+  - install conduit          0.12.0        
+  - install crc              1.0.0         
+  - install ezjsonm          0.4.3         
+  - install fieldslib        113.24.00     
+  - install git              1.8.0         
+  - install imaplet-lwt      0.1.10        
+  - install irmin            0.11.1        
+  - install jsonm            0.9.1         
+  - install magic-mime       1.0.0         
+  - install menhir           20160825      
+  - install mirage-no-solo5  1             
+  - install mirage-no-xen    1             
+  - install mirage-tc        0.3.0         
+  - install mstruct          1.3.2         
+  - install mtime            0.8.3         
+  - install nocrypto         dev~mirage    
+  - install oasis            0.4.7         
+  - install ocamlify         0.0.1         
+  - install ocamlmod         0.0.8         
+  - install ppx_fields_conv  113.33.00+4.03
+  - install ptime            0.8.2         
+  - install re               1.6.1         
+  - install stringext        1.4.2         
+  - install tls              dev~mirage    
+  - install uri              1.9.2         
+  - install uutf             0.9.4         
+  - install x509             0.5.2         
+  - install zarith           1.4.1         
+The following actions failed
+  - install hex 1.0.0
+The following changes have been performed
+  - install base64    2.0.0         
+  - install bin_prot  113.33.00+4.03
+  - install conf-gmp  1             
+  - install conf-perl 1             
+  - install crunch    1.4.1         
+[91m
+The former state can be restored with:
+    opam switch import "~/.opam/4.03.0/backup/state-20160808103831.export"
+'opam install --verbose --yes --jobs=2 imaplet-lwt' failed.
+[0mRemoving intermediate container 22cafabb2a8b
+The command '/bin/sh -c opam depext -uiyv -j 2 imaplet-lwt' returned a non-zero code: 4
+[2016-09-08 11:05.21] Failed: Build exit 4
