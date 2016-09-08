@@ -1,0 +1,9 @@
+=== Building 1ddc55ed13d1cbfeda95766dfebd25fa
+[2016-09-08 10:28.45] Starting...
+Sending build context to Docker daemon 2.048 kB
+Step 1 : FROM sha256:abc1eba3d8315cdbaa57c7db9c6566efcf9d84aa25f8724abd7ff7662dfb264c
+ ---> abc1eba3d831
+Step 2 : RUN opam depext -uiyv -j 2 mirage-seal
+exit status 1: "/sbin/zfs zfs snapshot zpool-docker/docker/e38a5e2c4f368ef5be09baaec42679d14e5cd9a9c2ca15156c5cf3570604a25a@255730356" => cannot create snapshots : out of space
+
+[2016-09-08 10:36.41] Failed: Build exit 1
