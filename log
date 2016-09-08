@@ -1,0 +1,8 @@
+=== Building c458f437db7d4c1a1860403365adaf3f
+[2016-09-08 12:04.48] Starting...
+Sending build context to Docker daemon  2.56 kB
+Step 1 : FROM ocaml/opam:alpine-3.4_ocaml-4.03.0
+ ---> 86856e7a3c76
+Step 2 : WORKDIR /home/opam/opam-repository
+open /var/lib/docker/containers/c5d0705130030d6fff26abe52c7c953d8753adafee203320bd1f601fdf53fb53/.tmp-config.v2.json041412606: no space left on device
+[2016-09-08 12:46.57] Failed: Build exit 1
